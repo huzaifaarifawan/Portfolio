@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Huzaifa - Full Stack Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-center items-center">
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#resume" class="nav-link">Resume</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="md:hidden flex items-center justify-center w-full">
+                <button id="mobileMenu" class="p-2 rounded-full hover:bg-gray-100">
+                    <i class="fas fa-bars text-gray-800"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobileNav" class="hidden md:hidden bg-white px-6 pb-4">
+            <div class="flex flex-col items-center space-y-4">
+                <a href="#home" class="nav-link-mobile">Home</a>
+                <a href="#experience" class="nav-link-mobile">Experience</a>
+                <a href="#skills" class="nav-link-mobile">Skills</a>
+                <a href="#projects" class="nav-link-mobile">Projects</a>
+                <a href="#education" class="nav-link-mobile">Education</a>
+                <a href="#resume" class="nav-link-mobile">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-6">
+        <div class="container mx-auto text-center">
+            <div class="animate-fade-in-up opacity-0">
+                <img src="huzaifa.jpeg" alt="Profile Photo"
+                    class="w-48 h-48 rounded-full mx-auto mb-8 border-4 border-blue-500 hover:scale-110 transition-transform duration-300">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-slide-up opacity-0">
+                    Muhammad Huzaifa Bin Arif
+                </h1>
+                <h2 class="text-xl md:text-2xl text-blue-500 mb-6 animate-slide-up delay-100 opacity-0">
+                    Full Stack Developer
+                </h2>
+                <p
+                    class="text-lg text-gray-600 max-w-2xl mx-auto mb-8 animate-slide-up delay-200 opacity-0">
+                    IT Manager | MERN Stack Specialist | ASP.NET MVC Expert | SQA Professional
+                </p>
+                <div class="flex justify-center space-x-4 animate-fade-in delay-300 opacity-0">
+                    <a href="#contact" class="btn-primary">Contact Me</a>
+                    <a href="resume.pdf" download class="btn-secondary">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-heading animate-slide-up opacity-0">Professional Experience</h2>
+
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <!-- IT Manager Card -->
+                <div class="experience-card opacity-0">
+                    <h3 class="text-xl font-bold mb-2">IT Manager</h3>
+                    <p class="text-blue-500 mb-2">Innovista • Oct 2024 - Present</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Managed E-commerce Portal (VistaMart.biz)</li>
+                        <li>Implemented innovative features enhancing UX</li>
+                        <li>Ensured platform security and performance</li>
+                    </ul>
+                </div>
+
+                <!-- Software Developer Card -->
+                <div class="experience-card opacity-0">
+                    <h3 class="text-xl font-bold mb-2">Software Developer</h3>
+                    <p class="text-blue-500 mb-2">Vision Tech 360 • May 2024 - Present</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Developed web apps using ASP.NET MVC</li>
+                        <li>Integrated GIS solutions with ArcGIS</li>
+                        <li>Implemented ASP.NET Identity auth</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="section-heading animate-slide-up opacity-0">Technical Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-12">
+                <!-- Existing Skills -->
+                <div class="skill-card opacity-0">
+                    <i class="fab fa-react text-4xl text-blue-500"></i>
+                    <h3>React</h3>
+                </div>
+                <div class="skill-card opacity-0">
+                    <i class="fab fa-node-js text-4xl text-blue-500"></i>
+                    <h3>Node.js</h3>
+                </div>
+                <div class="skill-card opacity-0">
+                    <i class="fab fa-js text-4xl text-blue-500"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <!-- New Skills -->
+                <div class="skill-card opacity-0">
+                    <i class="fab fa-microsoft text-4xl text-blue-500"></i>
+                    <h3>ASP.NET</h3>
+                </div>
+                <div class="skill-card opacity-0">
+                    <i class="fab fa-laravel text-4xl text-blue-500"></i>
+                    <h3>Laravel</h3>
+                </div>
+                <div class="skill-card opacity-0">
+                    <i class="fab fa-python text-4xl text-blue-500"></i>
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-card opacity-0">
+                    <i class="fas fa-database text-4xl text-blue-500"></i>
+                    <h3>MongoDB</h3>
+                </div>
+                <div class="skill-card opacity-0">
+                    <i class="fas fa-database text-4xl text-blue-500"></i>
+                    <h3>MySQL</h3>
+                </div>
+                <div class="skill-card opacity-0">
+                    <i class="fab fa-git-alt text-4xl text-blue-500"></i>
+                    <h3>Git</h3>
+                </div>
+                <div class="skill-card opacity-0">
+                    <i class="fab fa-bootstrap text-4xl text-blue-500"></i>
+                    <h3>Bootstrap</h3>
+                </div>
+            </div>
+        </div>
+    </section>...
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-heading animate-slide-up opacity-0">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <!-- CyPulse Project -->
+                <div class="project-card opacity-0">
+                    <div class="project-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>CyPulse Frontend</h3>
+                        <p class="text-gray-300">Cybersecurity-focused website with real-time threat monitoring
+                        </p>
+                        <div class="tech-tags">
+                            <span>React</span>
+                            <span>Tailwind</span>
+                            <span>Node.js</span>
+                            <span>WebSockets</span>
+                        </div>
+                        <a href="https://github.com/huzaifaarifawan/cypulse-frontend" class="project-link">
+                            <i class="fab fa-github"></i> View Source
+                        </a>
+                    </div>
+                </div>
+                <!-- Maze Escaper -->
+                <div class="project-card opacity-0">
+                    <div class="project-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Maze Escaper Game</h3>
+                        <p class="text-gray-300">3D game with maze navigation and coin collection</p>
+                        <div class="tech-tags">
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Blender</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Reminder App -->
+                <div class="project-card opacity-0">
+                    <div class="project-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Reminder Mobile App</h3>
+                        <p class="text-gray-300">Task management app with CRUD operations</p>
+                        <div class="tech-tags">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Travel Agency -->
+                <div class="project-card opacity-0">
+                    <div class="project-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Travel Agency Web App</h3>
+                        <p class="text-gray-300">Booking platform for flights and hotels</p>
+                        <div class="tech-tags">
+                            <span>Laravel</span>
+                            <span>MySQL</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Education Section -->
+    <section id="education" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="section-heading animate-slide-up opacity-0">Education</h2>
+
+            <div class="education-card opacity-0 mt-12">
+                <h3 class="text-xl font-bold">BSc Computer Science</h3>
+                <p class="text-blue-500">COMSATS University Islamabad • 2019-2023</p>
+                <ul class="list-disc pl-5 mt-4">
+                    <li>Relevant Coursework: OOP, DSA, Software Engineering</li>
+                    <li>CGPA: 3.2/4.0</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="section-heading animate-slide-up opacity-0">Resume</h2>
+            <div class="mt-12 animate-fade-in-up opacity-0">
+                <iframe src="resume.pdf" class="w-full h-96 border rounded-lg"></iframe>
+                <div class="mt-8">
+                    <a href="resume.pdf" download class="btn-primary">
+                        <i class="fas fa-download mr-2"></i>Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6 max-w-2xl">
+            <h2 class="section-heading animate-slide-up opacity-0">Contact Me</h2>
+            <div class="mt-12 animate-fade-in-up opacity-0">
+                <div class="contact-info mb-8 text-center">
+                    <p class="mb-2"><i class="fas fa-phone-alt mr-2"></i>+92-318-5125797</p>
+                    <p class="mb-2"><i class="fas fa-envelope mr-2"></i>huzaifaarifawan@gmail.com</p>
+                    <div class="flex justify-center space-x-4 mt-4">
+                        <a href="https://linkedin.com/in/huzaifaarifawan" class="social-link">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="https://github.com/huzaifaarifawan" class="social-link">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form animate-fade-in-up opacity-0" action="https://formspree.io/f/mdkazooj"
+                    method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required
+                        class="w-full p-3 mb-4 border rounded">
+                    <input type="email" name="email" placeholder="Your Email" required
+                        class="w-full p-3 mb-4 border rounded">
+                    <textarea name="message" placeholder="Your Message" required
+                        class="w-full p-3 mb-4 border rounded h-32"></textarea>
+                    <button type="submit" class="btn-primary w-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-600">&copy; 2025 Muhammad Huzaifa Bin Arif. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
