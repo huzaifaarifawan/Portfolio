@@ -1,138 +1,151 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muhammad Huzaifa - IAM Consultant | Full Stack Developer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Huzaifa | IAM Consultant & Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+<body class="bg-slate-50 text-slate-900 antialiased">
 
-<body class="bg-slate-50 antialiased">
-
-    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm transition-all duration-300">
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="font-bold text-xl text-blue-600">MH.</span>
-            <div class="hidden md:flex items-center space-x-6">
+            <span class="text-2xl font-bold text-blue-600">MH.</span>
+            <div class="hidden md:flex space-x-8 font-medium">
                 <a href="#home" class="hover:text-blue-600 transition">Home</a>
                 <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
-                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
                 <a href="#certifications" class="hover:text-blue-600 transition">Certifications</a>
                 <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
-                <a href="#contact" class="hover:text-blue-600 transition text-blue-600 font-bold">Contact</a>
+                <a href="#contact" class="text-blue-600 font-bold">Contact</a>
             </div>
-            <div class="md:hidden">
-                <button id="mobileMenu" class="p-2">
-                    <i class="fas fa-bars text-gray-800 text-2xl"></i>
-                </button>
-            </div>
+            <button id="mobileMenuBtn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
         </div>
-        <div id="mobileNav" class="hidden bg-white px-6 pb-6 border-b">
-            <div class="flex flex-col space-y-4">
-                <a href="#home" class="mobile-link">Home</a>
-                <a href="#experience" class="mobile-link">Experience</a>
-                <a href="#skills" class="mobile-link">Skills</a>
-                <a href="#certifications" class="mobile-link">Certifications</a>
-                <a href="#projects" class="mobile-link">Projects</a>
-                <a href="#contact" class="mobile-link">Contact</a>
-            </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t p-6 flex flex-col space-y-4 shadow-xl">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#certifications" class="mobile-link">Certifications</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#contact" class="mobile-link">Contact</a>
         </div>
     </nav>
 
-    <section id="home" class="pt-32 pb-20 px-6">
-        <div class="container mx-auto text-center">
-            <div class="reveal">
-                <img src="huzaifa.jpeg" alt="Huzaifa Profile" class="w-44 h-44 rounded-full mx-auto mb-8 border-4 border-blue-500 shadow-xl hover:scale-105 transition-transform">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-gray-800">Muhammad Huzaifa Bin Arif</h1>
-                <h2 class="text-xl md:text-2xl text-blue-600 mb-6 font-semibold">
-                    IAM Consultant | IBM Security Stack | Full Stack Developer
-                </h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
-                    Enterprise Identity & Access Management Specialist currently serving as Resident Engineer at Askari Bank (AKBL).
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition">Contact Me</a>
-                    <a href="resume.pdf" download class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition">Download Resume</a>
-                </div>
+    <section id="home" class="pt-40 pb-20 px-6">
+        <div class="container mx-auto text-center reveal">
+            <img src="huzaifa.jpeg" alt="Muhammad Huzaifa" class="w-40 h-40 rounded-full mx-auto mb-8 border-4 border-blue-500 shadow-2xl object-cover">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-slate-800">Muhammad Huzaifa Bin Arif</h1>
+            <p class="text-xl md:text-2xl text-blue-600 font-semibold mb-6">IAM Consultant | Resident Engineer | Full Stack Developer</p>
+            <p class="max-w-2xl mx-auto text-slate-600 mb-10 text-lg">Specializing in IBM Security Stack (ISVG, ISAM, PAM) and Full Stack Web Development (MERN & ASP.NET).</p>
+            <div class="flex justify-center gap-4">
+                <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Get In Touch</a>
+                <a href="resume.pdf" download class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition">Download CV</a>
             </div>
         </div>
     </section>
 
     <section id="experience" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16 text-gray-800">Professional Experience</h2>
+            <h2 class="text-3xl font-bold text-center mb-16 underline decoration-blue-500 decoration-4 underline-offset-8">Experience</h2>
             <div class="max-w-4xl mx-auto space-y-12">
-                
-                <div class="experience-card border-l-4 border-blue-600 pl-8 relative reveal">
-                    <div class="absolute -left-[10px] top-2 w-4 h-4 bg-blue-600 rounded-full"></div>
-                    <h3 class="text-2xl font-bold text-gray-800">IAM Consultant — Resident Engineer</h3>
-                    <p class="text-blue-600 font-semibold">Software Productivity Strategists, Inc | Apr 2025 – Present</p>
-                    <p class="mt-4 text-gray-600">Leading the deployment of enterprise IAM at Askari Bank using the IBM Security stack.</p>
-                    <ul class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-700 text-sm">
-                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>ISIM/ISVG Lifecycle Management</li>
-                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>ISAM for SSO & Access Management</li>
-                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>IBM SDS 6.4 (LDAP) Repository</li>
-                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>PAM: IBM Verify Privilege Vault</li>
-                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>Active Directory Integration</li>
-                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>SDI 7.2 Provisioning Workflows</li>
+                <div class="experience-card reveal">
+                    <h3 class="text-2xl font-bold">IAM Consultant — Resident Engineer</h3>
+                    <p class="text-blue-600 font-bold">Software Productivity Strategists, Inc | Apr 2025 – Present</p>
+                    <p class="mt-4 text-slate-600">Executing enterprise IAM deployment at Askari Bank (AKBL) using the full IBM Security stack including Identity Governance and Access Management.</p>
+                    <ul class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-700">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>ISIM/ISVG Lifecycle Management</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>ISAM for SSO & Access Control</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>IBM Verify Privilege Vault (PAM)</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Active Directory & LDAP Integration</li>
                     </ul>
                 </div>
-
-                <div class="experience-card border-l-4 border-green-500 pl-8 relative reveal">
-                    <div class="absolute -left-[10px] top-2 w-4 h-4 bg-green-500 rounded-full"></div>
-                    <h3 class="text-xl font-bold text-gray-800">IT Manager</h3>
-                    <p class="text-green-600 font-semibold">Innovista | Oct 2024 – Present</p>
-                    <p class="mt-2 text-gray-600">Optimizing VistaMart.biz e-commerce infrastructure and security.</p>
-                </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-20 bg-slate-50">
+    <section id="certifications" class="py-20 bg-slate-50">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16">Technical Skills</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-sm text-center reveal hover:shadow-md transition">
-                    <i class="fas fa-shield-alt text-4xl text-blue-600 mb-4"></i>
-                    <h3 class="font-bold">ISVG / ISIM</h3>
-                    <p class="text-xs text-gray-400">Identity Governance</p>
+            <h2 class="text-3xl font-bold text-center mb-16 underline decoration-blue-500 decoration-4 underline-offset-8">IBM Certifications</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                
+                <div class="cert-card reveal">
+                    <i class="fas fa-certificate text-blue-600 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-2">Guardium Data Security Center Sales</h3>
+                    <a href="https://www.credly.com/badges/8c1d8dd1-26f5-44f5-b3f4-3454091d5b53/public_url" target="_blank" class="text-blue-600 text-sm font-bold">Verify Credential →</a>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm text-center reveal hover:shadow-md transition">
-                    <i class="fas fa-key text-4xl text-blue-600 mb-4"></i>
-                    <h3 class="font-bold">PAM</h3>
-                    <p class="text-xs text-gray-400">Privileged Access</p>
+
+                <div class="cert-card reveal">
+                    <i class="fas fa-shield-halved text-blue-600 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-2">Verify Privilege Technical Sales</h3>
+                    <a href="https://www.credly.com/badges/dfbc4eed-8afb-42fc-a4f6-dea993028759/public_url" target="_blank" class="text-blue-600 text-sm font-bold">Verify Credential →</a>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm text-center reveal hover:shadow-md transition">
-                    <i class="fab fa-react text-4xl text-cyan-500 mb-4"></i>
-                    <h3 class="font-bold">React.js</h3>
+
+                <div class="cert-card reveal">
+                    <i class="fas fa-user-shield text-blue-600 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-2">Verify Identity Protection Tech Sales</h3>
+                    <a href="https://www.credly.com/badges/472b45dd-c853-4e7c-80c9-73745e342724/public_url" target="_blank" class="text-blue-600 text-sm font-bold">Verify Credential →</a>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm text-center reveal hover:shadow-md transition">
-                    <i class="fab fa-node-js text-4xl text-green-600 mb-4"></i>
-                    <h3 class="font-bold">Node.js</h3>
+
+                <div class="cert-card reveal">
+                    <i class="fas fa-fingerprint text-blue-600 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-2">Verify Identity Protection Sales</h3>
+                    <a href="https://www.credly.com/badges/cad58ed5-d827-467d-84b6-8e201708a566/public_url" target="_blank" class="text-blue-600 text-sm font-bold">Verify Credential →</a>
                 </div>
+
+                <div class="cert-card reveal">
+                    <i class="fas fa-vault text-blue-600 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-2">Verify Privileged Identity Sales</h3>
+                    <a href="https://www.credly.com/badges/5ae9de83-b314-4575-8b6a-3b318695dc28/public_url" target="_blank" class="text-blue-600 text-sm font-bold">Verify Credential →</a>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="certifications" class="py-20 bg-white">
+    <section id="projects" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16">IBM Certifications</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="p-6 border rounded-xl hover:border-blue-500 transition-all reveal group">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="font-bold text-lg group-hover:text-blue-600">IBM Verify Privilege Technical Sales</h3>
-                            <p class="text-sm text-gray-500">ID: SR007686 | May 2025</p>
-                        </div>
-                        <i class="fas fa-award text-3xl text-yellow-500"></i>
-                    </div>
-                    <a href="YOUR_CREDLY_LINK_HERE" target="_blank" class="inline-block mt-4 text-blue-600 font-semibold text-sm">Verify Credential →</a>
+            <h2 class="text-3xl font-bold text-center mb-16 underline decoration-blue-500 decoration-4 underline-offset-8">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <div class="project-card reveal">
+                    <h3 class="text-xl font-bold mb-3">Cypulse</h3>
+                    <p class="text-slate-600 text-sm mb-4">High-security web application for a cybersecurity firm featuring hardened authentication and secure data handling protocols.</p>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold">MERN Stack</span>
                 </div>
+
+                <div class="project-card reveal">
+                    <h3 class="text-xl font-bold mb-3">Maze Escaper Game</h3>
+                    <p class="text-slate-600 text-sm mb-4">3D interactive game developed as a Final Year Project using Unity and C# with complex pathfinding logic.</p>
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold">Unity / C#</span>
                 </div>
+
+                <div class="project-card reveal">
+                    <h3 class="text-xl font-bold mb-3">Traveling Agency Web App</h3>
+                    <p class="text-slate-600 text-sm mb-4">Full-service booking platform with CRUD management for flights, hotels, and user reservations.</p>
+                    <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-bold">Laravel / PHP</span>
+                </div>
+
+                <div class="project-card reveal">
+                    <h3 class="text-xl font-bold mb-3">Reminder Mobile App</h3>
+                    <p class="text-slate-600 text-sm mb-4">Task management application with real-time sync and cross-platform responsiveness.</p>
+                    <span class="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-xs font-bold">Flutter / Dart</span>
+                </div>
+
+            </div>
         </div>
     </section>
+
+    <section id="contact" class="py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">Ready to Collaborate?</h2>
+            <p class="mb-10 text-slate-400">Feel free to reach out for IAM consultations or Full Stack development inquiries.</p>
+            <a href="mailto:your-email@example.com" class="text-2xl font-bold border-b-2 border-blue-500 pb-2 hover:text-blue-400 transition">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-slate-950 text-center text-slate-500 text-sm">
+        <p>&copy; 2026 Muhammad Huzaifa. All Rights Reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
