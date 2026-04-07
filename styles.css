@@ -257,3 +257,12 @@ nav.scrolled {
   height: 200px;
   background: #e2e8f0;
 }
+
+/* IAM Highlight */
+.experience-card:first-child {
+  border-left: 5px solid #2563eb;
+}
+
+#certifications .experience-card {
+  background: #ffffff;
+}
