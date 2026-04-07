@@ -1,8 +1,8 @@
-/* Custom Reveal Animations */
+/* Reveal Logic */
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
+    transform: translateY(25px);
+    transition: all 0.7s ease-out;
 }
 
 .reveal.active {
@@ -10,31 +10,41 @@
     transform: translateY(0);
 }
 
-/* Card Styling */
+/* Base Components */
 .experience-card, .cert-card, .project-card {
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e2e8f0;
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .experience-card:hover, .cert-card:hover, .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    border-color: #3b82f6;
 }
 
-/* Navigation */
+/* Nav Effects */
+nav.scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem 0;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
 .mobile-link {
     font-weight: 600;
-    padding: 0.5rem 0;
+    color: #1e293b;
+    padding: 12px;
+    border-radius: 8px;
     border-bottom: 1px solid #f1f5f9;
 }
 
-/* Navigation Blur on Scroll Script adds 'scrolled' class */
-nav.scrolled {
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 0.75rem 0;
+/* Details/Summary Dropdown */
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] summary i {
+    transform: rotate(180deg);
 }
