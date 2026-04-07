@@ -266,3 +266,38 @@ nav.scrolled {
 #certifications .experience-card {
   background: #ffffff;
 }
+
+/* Experience Timeline */
+.experience-card {
+position: relative;
+background: white;
+border-radius: 12px;
+padding: 2rem;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.skill-card img {
+filter: grayscale(0.3);
+transition: all 0.3s ease;
+}
+
+.skill-card:hover img {
+filter: grayscale(0);
+transform: scale(1.05);
+}
+
+/* Detail Toggle */
+details summary {
+list-style: none;
+}
+
+details[open] summary {
+font-weight: bold;
+color: #2563eb;
+}
