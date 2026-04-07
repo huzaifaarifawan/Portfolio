@@ -7,8 +7,7 @@
     <title>Muhammad Huzaifa - IAM Consultant | Full Stack Developer</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body class="antialiased">
@@ -16,292 +15,214 @@
     <!-- Navigation -->
     <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm transition-all duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-center items-center">
-            <div class="hidden md:flex items-center space-x-8">
+            <!-- Desktop -->
+            <div class="hidden md:flex items-center space-x-6">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
                 <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#projects" class="nav-link">Projects</a>
                 <a href="#education" class="nav-link">Education</a>
                 <a href="#resume" class="nav-link">Resume</a>
             </div>
-
-            <div class="md:hidden flex items-center justify-center w-full">
+            <!-- Mobile Toggle -->
+            <div class="md:hidden">
                 <button id="mobileMenu" class="p-2 rounded-full hover:bg-gray-100">
                     <i class="fas fa-bars text-gray-800"></i>
                 </button>
             </div>
         </div>
-
+        <!-- Mobile Menu -->
         <div id="mobileNav" class="hidden md:hidden bg-white px-6 pb-4">
             <div class="flex flex-col items-center space-y-4">
                 <a href="#home" class="nav-link-mobile">Home</a>
                 <a href="#experience" class="nav-link-mobile">Experience</a>
                 <a href="#skills" class="nav-link-mobile">Skills</a>
-                <a href="#projects" class="nav-link-mobile">Projects</a>
                 <a href="#certifications" class="nav-link-mobile">Certifications</a>
+                <a href="#projects" class="nav-link-mobile">Projects</a>
                 <a href="#education" class="nav-link-mobile">Education</a>
                 <a href="#resume" class="nav-link-mobile">Resume</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section id="home" class="pt-32 pb-20 px-6">
         <div class="container mx-auto text-center">
             <div class="animate-fade-in-up opacity-0">
-                <img src="huzaifa.jpeg"
-                    class="w-48 h-48 rounded-full mx-auto mb-8 border-4 border-blue-500">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">Muhammad Huzaifa Bin Arif</h1>
-                <h2 class="text-xl md:text-2xl text-blue-500 mb-6">
-                    IAM Consultant | ISIM | ISAM | PAM | Full Stack Developer
+                <img src="huzaifa.jpeg" alt="Huzaifa Profile" class="w-48 h-48 rounded-full mx-auto mb-8 border-4 border-blue-500 hover:scale-110 transition-transform">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-gray-800">Muhammad Huzaifa Bin Arif</h1>
+                <h2 class="text-xl md:text-2xl text-blue-500 mb-6 font-semibold">
+                    IAM Consultant | ISIM/ISAM/PAM | Full Stack Developer
                 </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                    Enterprise Identity & Access Management | IBM Security Stack | MERN | ASP.NET
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#contact" class="btn-primary px-8 py-3">Contact Me</a>
+                    <a href="resume.pdf" download class="btn-secondary px-8 py-3 border-2 border-blue-500">Download Resume</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience -->
+    <!-- Experience Section - Vertical Timeline Style -->
     <section id="experience" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-            <h2 class="section-heading">Professional Experience</h2>
-
-            <div class="grid md:grid-cols-2 gap-8 mt-12">
-
-                <!-- IAM EXPERIENCE -->
-                <div class="experience-card">
-                    <h3 class="text-xl font-bold mb-2">IAM Consultant</h3>
-                    <p class="text-blue-500 mb-2">Enterprise IAM Deployment (ISIM/ISAM)</p>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>Deployed IBM Security Identity Manager (ISIM) end-to-end</li>
-                        <li>Configured LDAP (IBM SDS) as identity repository</li>
-                        <li>Implemented DB2 backend for IAM data storage</li>
-                        <li>Configured SDI/TDI for identity synchronization</li>
-                        <li>Setup Dispatcher for provisioning operations</li>
-                        <li>Integrated Active Directory for automated onboarding/offboarding</li>
+            <h2 class="section-heading opacity-0">Professional Experience</h2>
+            
+            <div class="max-w-4xl mx-auto mt-16 space-y-8">
+                <!-- IAM Consultant - TOP -->
+                <div class="experience-card border-l-4 border-blue-500 pl-8 relative opacity-0">
+                    <div class="absolute -left-8 top-6 w-4 h-4 bg-blue-500 rounded-full"></div>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">IAM Consultant — Resident Engineer</h3>
+                    <p class="text-blue-600 font-semibold mb-4">Software Productivity Strategists, Inc | Apr 2025 – Present</p>
+                    <p class="text-gray-600 mb-4">Deployed enterprise IAM at Askari Bank (AKBL) using full IBM Security stack.</p>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                        <li>ISIM/ISVG for identity lifecycle management & provisioning</li>
+                        <li>ISAM for SSO/access management across banking systems</li>
+                        <li>LDAP (IBM SDS 6.4) as central user repository</li>
+                        <li>DB2 backend with ISIM schema deployment</li>
+                        <li>SDI 7.2 for provisioning workflows & data feeds</li>
+                        <li>Active Directory integration (automated onboarding/offboarding)</li>
+                        <li>PAM with IBM Verify Privilege Vault (least privilege, session monitoring)</li>
                     </ul>
+                    <details class="mt-4">
+                        <summary class="cursor-pointer font-medium text-blue-600 hover:text-blue-800">View Lab Deployment Details →</summary>
+                        <div class="mt-4 pt-4 border-t text-sm text-gray-600">
+                            <p><strong>Lab Environment:</strong> VMware Workstation | 192.168.10.0/24 | Full stack deployment</p>
+                            <p>ISIM appliance → DB2 → LDAP → SDI → Dispatcher → AD integration</p>
+                        </div>
+                    </details>
                 </div>
 
                 <!-- IT Manager -->
-                <div class="experience-card">
+                <div class="experience-card border-l-4 border-green-500 pl-8 relative opacity-0">
+                    <div class="absolute -left-8 top-6 w-4 h-4 bg-green-500 rounded-full"></div>
                     <h3 class="text-xl font-bold mb-2">IT Manager</h3>
-                    <p class="text-blue-500 mb-2">Innovista</p>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>Managed E-commerce Portal</li>
-                        <li>Improved system performance</li>
+                    <p class="text-green-600 font-semibold mb-4">Innovista | Oct 2024 – Present</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Managed VistaMart.biz e-commerce operations</li>
+                        <li>Platform security & performance optimization</li>
+                        <li>Team leadership & system administration</li>
                     </ul>
                 </div>
 
                 <!-- Software Developer -->
-                <div class="experience-card">
+                <div class="experience-card border-l-4 border-purple-500 pl-8 relative opacity-0">
+                    <div class="absolute -left-8 top-6 w-4 h-4 bg-purple-500 rounded-full"></div>
                     <h3 class="text-xl font-bold mb-2">Software Developer</h3>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>ASP.NET & GIS solutions</li>
+                    <p class="text-purple-600 font-semibold mb-4">VisionTech360 | May 2024 – Oct 2024</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>ASP.NET MVC web application development</li>
+                        <li>ArcGIS integration for geospatial solutions</li>
+                        <li>Identity management with ASP.NET Identity</li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Skills -->
+    <!-- Skills Section - With Logos -->
     <section id="skills" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="section-heading">Technical Skills</h2>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-
+            <h2 class="section-heading opacity-0">Technical Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-16">
+                
                 <!-- IAM Skills -->
-                <div class="skill-card">
-                    <h3>ISIM</h3>
+                <div class="skill-card text-center p-6 hover:shadow-lg opacity-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/IBM_logo_2021.svg/2560px-IBM_logo_2021.svg.png" alt="IBM" class="w-16 h-16 mx-auto mb-4 opacity-80">
+                    <h3 class="font-semibold">ISIM/ISVG</h3>
+                    <p class="text-sm text-gray-500">Identity Governance</p>
                 </div>
-                <div class="skill-card">
-                    <h3>ISAM</h3>
+                <div class="skill-card text-center p-6 hover:shadow-lg opacity-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/IBM_logo_2021.svg/2560px-IBM_logo_2021.svg.png" alt="IBM" class="w-16 h-16 mx-auto mb-4 opacity-80">
+                    <h3 class="font-semibold">ISAM</h3>
+                    <p class="text-sm text-gray-500">Access Management</p>
                 </div>
-                <div class="skill-card">
-                    <h3>PAM</h3>
+                <div class="skill-card text-center p-6 hover:shadow-lg opacity-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/IBM_logo_2021.svg/2560px-IBM_logo_2021.svg.png" alt="IBM" class="w-16 h-16 mx-auto mb-4 opacity-80">
+                    <h3 class="font-semibold">PAM</h3>
+                    <p class="text-sm text-gray-500">Privileged Access</p>
                 </div>
-                <div class="skill-card">
-                    <h3>LDAP (IBM SDS)</h3>
-                </div>
-                <div class="skill-card">
-                    <h3>DB2</h3>
-                </div>
-                <div class="skill-card">
-                    <h3>SDI/TDI</h3>
-                </div>
-                <div class="skill-card">
-                    <h3>Active Directory</h3>
+                <div class="skill-card text-center p-6 hover:shadow-lg opacity-0">
+                    <i class="fas fa-server text-5xl text-blue-500 mx-auto mb-4"></i>
+                    <h3 class="font-semibold">LDAP/AD</h3>
+                    <p class="text-sm text-gray-500">Directory Services</p>
                 </div>
 
-                <!-- Existing Skills -->
-                <div class="skill-card"><h3>React</h3></div>
-                <div class="skill-card"><h3>Node.js</h3></div>
-                <div class="skill-card"><h3>JavaScript</h3></div>
-
+                <!-- Development Skills -->
+                <div class="skill-card text-center p-6 hover:shadow-lg opacity-0">
+                    <i class="fab fa-react text-5xl text-blue-400 mx-auto mb-4"></i>
+                    <h3 class="font-semibold">React</h3>
+                </div>
+                <div class="skill-card text-center p-6 hover:shadow-lg opacity-0">
+                    <i class="fab fa-node-js -0">
+                    <i class="fab fa-node-js text-5xl text-g3 class="font-semibold">Node.js</h3>
+                </div>
+                <div class="skill-card text-center p-6 hover:shadow-lg opacity-0">
+                    <i class="fab fa-js-square text-5xl text-yellow-500 mx-auto mb-4"></i>
+                    <h3 class="font-semibold">JavaScript</h3>
+                </div>
+                <div class="skill-card text-center p-6 hover:shadow-lg opacity-0">
+                    <i class="fas fa-database text-5xl text-orange-500 mx-auto mb-4"></i>
+                    <h3 class="font-semibold">MongoDB</h3>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Certifications -->
+    <!-- Certifications Section -->
     <section id="certifications" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-            <h2 class="section-heading">Certifications & Courses</h2>
-
-            <div class="grid md:grid-cols-2 gap-8 mt-12">
-                <div class="experience-card">
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>Identity & Access Management Fundamentals</li>
-                        <li>IBM Security Identity Manager Training</li>
-                        <li>Active Directory Administration</li>
-                        <li>Cybersecurity & IAM Concepts</li>
-                    </ul>
+            <h2 class="section-heading opacity-0">IBM Certifications</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-16">
+                <div class="experience-card p-8 hover:shadow-xl transition-all">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-certificate text-blue-500 mr-3"></i>
+                        IBM Verify Privilege Technical Sales Intermediate
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-4">ID: SR007686 | May 2025</p>
+                    <a href="#" class="text-blue-600 hover:underline font-medium">View Credential →</a>
+                </div>
+                <div class="experience-card p-8 hover:shadow-xl transition-a-0">
+                    <i class="fab fa-node-js text-5xl text-gtems-center">
+                        <i class="fas fa-certificate text-blue-500 mr-3"></i>
+                        IBM Guardium Data Security Center Technical Sales
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-4">ID: BG-93142dc2c12d46ee95011ffa3f649 | Feb 2026</p>
+                    <a href="#" class="text-blue-600 hover:underline font-medium">View Credential →</a>
+                </div>
+                <div class="experience-card p-8 hover:shadow-xl transition-all">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-certificate text-blue-500 mr-3"></i>
+                        IBM Verify Identity Protection Technical Sales (Level 3)
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-4">ID: SR008226 | May 2025</p>
+                    <a href="#" class="text-blue-600 hover:underline font-medium">View Credential →</a>
+                </div>
+                <div class="experience-card p-8 hover:shadow-xl transition-all">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-certificate text-blue-500 mr-3"></i>
+                        IBM Verify Privileged Identity Sales Foundation
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-4">ID: SRU0081 | May 2025</p>
+                    <a href="#" class="text-blue-600 hover:underline font-medium">View Credential →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- KEEP YOUR PROJECTS, EDUCATION, CONTACT SAME -->
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="section-heading animate-slide-up opacity-0">Featured Projects</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-                <!-- CyPulse Project -->
-                <div class="project-card opacity-0">
-                    <div class="project-image">
-                        <div class="image-placeholder"></div>
-                    </div>
-                    <div class="project-content">
-                        <h3>CyPulse Frontend</h3>
-                        <p class="text-gray-300">Cybersecurity-focused website with real-time threat monitoring
-                        </p>
-                        <div class="tech-tags">
-                            <span>React</span>
-                            <span>Tailwind</span>
-                            <span>Node.js</span>
-                            <span>WebSockets</span>
-                        </div>
-                        <a href="https://github.com/huzaifaarifawan/cypulse-frontend" class="project-link">
-                            <i class="fab fa-github"></i> View Source
-                        </a>
-                    </div>
-                </div>
-                <!-- Maze Escaper -->
-                <div class="project-card opacity-0">
-                    <div class="project-image">
-                        <div class="image-placeholder"></div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Maze Escaper Game</h3>
-                        <p class="text-gray-300">3D game with maze navigation and coin collection</p>
-                        <div class="tech-tags">
-                            <span>Unity</span>
-                            <span>C#</span>
-                            <span>Blender</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Reminder App -->
-                <div class="project-card opacity-0">
-                    <div class="project-image">
-                        <div class="image-placeholder"></div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Reminder Mobile App</h3>
-                        <p class="text-gray-300">Task management app with CRUD operations</p>
-                        <div class="tech-tags">
-                            <span>Flutter</span>
-                            <span>Dart</span>
-                            <span>Firebase</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Travel Agency -->
-                <div class="project-card opacity-0">
-                    <div class="project-image">
-                        <div class="image-placeholder"></div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Travel Agency Web App</h3>
-                        <p class="text-gray-300">Booking platform for flights and hotels</p>
-                        <div class="tech-tags">
-                            <span>Laravel</span>
-                            <span>MySQL</span>
-                            <span>Bootstrap</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Education Section -->
-    <section id="education" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="section-heading animate-slide-up opacity-0">Education</h2>
-
-            <div class="education-card opacity-0 mt-12">
-                <h3 class="text-xl font-bold">BSc Computer Science</h3>
-                <p class="text-blue-500">COMSATS University Islamabad • 2019-2023</p>
-                <ul class="list-disc pl-5 mt-4">
-                    <li>Relevant Coursework: OOP, DSA, Software Engineering</li>
-                    <li>CGPA: 3.2/4.0</li>
-                </ul>
-            </div>
+    <!-- Projects Section (Keep Existing) -->
+    <section id="projects" class="py-20">
+        <!-- Your existing projects code here-0">
+                    <i class="fab fa-node-js text-5xl text-g class="section-heading opacity-0">Featured Projects</h2>
+            <!-- Add your project cards here -->
         </div>
     </section>
 
-    <!-- Resume Section -->
-    <section id="resume" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="section-heading animate-slide-up opacity-0">Resume</h2>
-            <div class="mt-12 animate-fade-in-up opacity-0">
-                <iframe src="resume.pdf" class="w-full h-96 border rounded-lg"></iframe>
-                <div class="mt-8">
-                    <a href="resume.pdf" download class="btn-primary">
-                        <i class="fas fa-download mr-2"></i>Download PDF
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20">
-        <div class="container mx-auto px-6 max-w-2xl">
-            <h2 class="section-heading animate-slide-up opacity-0">Contact Me</h2>
-            <div class="mt-12 animate-fade-in-up opacity-0">
-                <div class="contact-info mb-8 text-center">
-                    <p class="mb-2"><i class="fas fa-phone-alt mr-2"></i>+92-318-5125797</p>
-                    <p class="mb-2"><i class="fas fa-envelope mr-2"></i>huzaifaarifawan@gmail.com</p>
-                    <div class="flex justify-center space-x-4 mt-4">
-                        <a href="https://linkedin.com/in/huzaifaarifawan" class="social-link">
-                            <i class="fab fa-linkedin text-2xl"></i>
-                        </a>
-                        <a href="https://github.com/huzaifaarifawan" class="social-link">
-                            <i class="fab fa-github text-2xl"></i>
-                        </a>
-                    </div>
-                </div>
-                <form class="contact-form animate-fade-in-up opacity-0" action="https://formspree.io/f/mdkazooj"
-                    method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required
-                        class="w-full p-3 mb-4 border rounded">
-                    <input type="email" name="email" placeholder="Your Email" required
-                        class="w-full p-3 mb-4 border rounded">
-                    <textarea name="message" placeholder="Your Message" required
-                        class="w-full p-3 mb-4 border rounded h-32"></textarea>
-                    <button type="submit" class="btn-primary w-full">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-6 bg-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-gray-600">&copy; 2025 Muhammad Huzaifa Bin Arif. All rights reserved.</p>
-        </div>
-    </footer>
+    <!-- Education, Resume, Contact - Keep Existing -->
+    <!-- ... your existing sections ... -->
 
     <script src="script.js"></script>
 </body>
