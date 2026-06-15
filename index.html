@@ -4,11 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muhammad Huzaifa | IAM Consultant & Developer</title>
-  
-  <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -29,13 +25,13 @@
       <i class="fas fa-bars"></i>
     </button>
   </div>
-  <div id="mobileMenu" class="mobile-menu">
-    <a href="#home">Home</a>
-    <a href="#experience">Experience</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#projects">Projects</a>
-    <a href="#resume-view">Resume</a>
-    <a href="#contact">Contact</a>
+  <div id="mobileMenu" class="mobile-menu hidden">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#certifications" class="mobile-link">Certifications</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#resume-view" class="mobile-link">Resume</a>
+    <a href="#contact" class="mobile-link">Contact</a>
   </div>
 </nav>
 
@@ -59,52 +55,63 @@
     <h2 class="heading-xxl section-title">Experience</h2>
     <div class="experience-grid">
 
-      <!-- IAM Consultant -->
-      <div class="experience-card card-blue">
+      <!-- IAM Consultant (UPDATED DESCRIPTION) -->
+      <div class="experience-card card-blue reveal">
         <div class="card-marker"></div>
         <h3 class="heading-xl">IAM Consultant — Resident Engineer</h3>
         <p class="text-blue font-bold">Software Productivity Strategists, Inc | Apr 2025 – Present</p>
-        <p class="text-gray mt-4">Serving as Resident Engineer at Askari Bank Ltd (AKBL) Headquarters, managing enterprise identity operations and security infrastructure.</p>
         
-        <details class="dropdown">
+        <details class="dropdown mt-4">
           <summary class="dropdown-summary">
             View Full IAM Deployment Details
             <i class="fas fa-chevron-down"></i>
           </summary>
           <div class="dropdown-content">
-            <p><strong>• Enterprise IAM Deployment:</strong> Performed full enterprise-level deployment and configuration of IBM Security Identity Manager/IBM Security Verify Governance (ISIM/ISVG), including DB2 database setup, IBM Security Directory Server (LDAP), and IBM Security Directory Integrator (SDI) 7.2 with initialized solution directory.</p>
-            <p><strong>• ISAM Configuration:</strong> Configured and validated IBM Security Verify Access (ISAM) in a VMware-based lab environment, with integration work ongoing alongside ISIM and Active Directory.</p>
-            <p><strong>• Core Responsibilities:</strong> Managing enterprise identity operations, security infrastructure monitoring, user provisioning workflows, access control policy enforcement (RBAC/ABAC), and PAM operations for privileged accounts.</p>
-            <p><strong>• Compliance & Security:</strong> Ensuring identity infrastructure remains auditable and compliant with banking security standards, performing lifecycle management, and overseeing privileged access management across critical banking systems.</p>
+            <p class="mb-4">Serving as a Resident Engineer at Askari Bank Headquarters, managing full-lifecycle Identity & Access Management (IAM) infrastructure, from large-scale IBM stack deployments to daily operational security.</p>
+            
+            <p class="font-bold text-blue mb-2">Core Deployments & Integrations:</p>
+            <ul class="mb-4">
+              <li><strong>IBM Stack IAM:</strong> Successfully deployed and integrated the full IBM IAM Solutions Stack, including ISIM/ISVG, ISAM/ISVA, and ISVP/PAM.</li>
+              <li><strong>Directory Services:</strong> Deployed Active Directory (AD) and seamlessly integrated it with ISIM and ISAM for centralized identity management. Meanwhile, PAM integration currently in progress.</li>
+              <li><strong>Infrastructure Upgrades:</strong> Recent system upgrades in-progress for ISIM and ISAM to ensure optimal performance, security, and compliance.</li>
+            </ul>
+            
+            <p class="font-bold text-blue mb-2">On-Site Operations (Askari Bank HQ):</p>
+            <ul>
+              <li><strong>Daily Operations:</strong> Oversee day-to-day IAM tasks, managing user onboarding, offboarding, role provisioning, and access level controls.</li>
+              <li><strong>Support & Troubleshooting:</strong> Serve as the primary technical point of contact to resolve complex access issues and maintain system uptime.</li>
+              <li><strong>Governance & Access Control:</strong> Designed and enforced secure access policies utilizing RBAC/ABAC models, MFA, and SSO solutions.</li>
+            </ul>
           </div>
         </details>
       </div>
 
-      <!-- Merged VisionTech360 + Innovista -->
-      <div class="experience-card card-purple">
+      <!-- Merged VisionTech360 (INNOVISTA REMOVED FROM HEADING, MERGED IN DESCRIPTION) -->
+      <div class="experience-card card-purple reveal">
         <div class="card-marker"></div>
         <h3 class="heading-xl">Software Developer & IT Manager</h3>
-        <p class="text-purple font-bold">VisionTech360 | Apr 2024 – Mar 2025 | Innovista | Oct 2024 – Mar 2025</p>
-        <p class="text-gray mt-4">Developed and maintained web applications using MERN Stack and ASP.NET MVC. Designed and integrated GIS solutions using ArcGIS with ASP.NET.</p>
+        <p class="text-purple font-bold">VisionTech360 | Apr 2024 – Mar 2025</p>
         
-        <details class="dropdown">
+        <details class="dropdown mt-4">
           <summary class="dropdown-summary">
             View Full Project Details
             <i class="fas fa-chevron-down"></i>
           </summary>
           <div class="dropdown-content">
-            <p><strong>VisionTech360 (Software Developer):</strong></p>
-            <ul>
+            <p class="mb-4">Developed and maintained web applications using MERN Stack and ASP.NET MVC. Designed and integrated GIS solutions using ArcGIS with ASP.NET. Implemented robust authentication mechanisms using ASP.NET Identity.</p>
+            
+            <ul class="mb-4">
               <li>Developed and maintained web applications using MERN Stack and ASP.NET MVC</li>
               <li>Designed and integrated GIS solutions using ArcGIS with ASP.NET</li>
               <li>Implemented robust authentication mechanisms using ASP.NET Identity</li>
-              <li>Developed Cypulse (Cyber-security Website) using MERN stack and built an Ionic React mobile app</li>
-              <li>Collaborated with cross-functional teams</li>
+              <li>Developed Cypulse (Cyber-security Website) using MERN stack and built an Ionic React mobile app for cross-platform delivery</li>
+              <li>Collaborated with cross-functional teams to align technical solutions with business objectives</li>
             </ul>
-            <p class="mt-3"><strong>Innovista (IT Manager) - VistaMart.biz:</strong></p>
+            
+            <p class="font-bold text-purple mt-4 mb-2">Referenced Role at Innovista (IT Manager):</p>
+            <p class="mb-2">Referred to Innovista as IT Manager and Software Developer for e-commerce project named VistaMart.biz, where I managed:</p>
             <ul>
-              <li>Referred to Innovista as IT Manager and Software Developer for e-commerce project VistaMart.biz</li>
-              <li>Managed platform performance, security, and infrastructure</li>
+              <li>Platform performance, security, and infrastructure</li>
               <li>Platform security & performance optimization</li>
               <li>Team leadership & system administration</li>
             </ul>
@@ -122,42 +129,42 @@
     <h2 class="heading-xxl section-title">IBM Certifications</h2>
     <div class="cert-grid">
 
-      <div class="cert-card cert-blue">
+      <div class="cert-card cert-blue reveal">
         <i class="fas fa-shield-virus icon-large"></i>
         <h3 class="font-bold">Guardium Data Security Center Tech Sales Intermediate</h3>
         <p class="text-small text-gray">ID: BG-93142dc2c12d46ee95011ffa3f649 | Feb 2026</p>
         <a href="https://www.credly.com/badges/5948aebc-ec28-4f7f-8ac9-a1e6cb236df0/public_url" target="_blank" class="text-blue font-bold">Verify Credential →</a>
       </div>
 
-      <div class="cert-card">
+      <div class="cert-card reveal">
         <i class="fas fa-certificate icon-large text-blue"></i>
         <h3 class="font-bold text-small">Guardium Data Security Center Sales Foundation</h3>
         <p class="text-small text-gray">ID: BG-7bce6b8a94853652ce600ee2469db | Feb 2026</p>
         <a href="https://www.credly.com/badges/8c1d8dd1-26f5-44f5-b3f4-3454091d5b53/public_url" target="_blank" class="text-blue font-bold">Verify Credential →</a>
       </div>
 
-      <div class="cert-card">
+      <div class="cert-card reveal">
         <i class="fas fa-shield-halved icon-large text-blue"></i>
         <h3 class="font-bold text-small">IBM Verify Privilege Technical Sales Intermediate</h3>
         <p class="text-small text-gray">ID: SR007686 | May 2025</p>
         <a href="https://www.credly.com/badges/dfbc4eed-8afb-42fc-a4f6-dea993028759/public_url" target="_blank" class="text-blue font-bold">Verify Credential →</a>
       </div>
 
-      <div class="cert-card">
+      <div class="cert-card reveal">
         <i class="fas fa-user-shield icon-large text-blue"></i>
         <h3 class="font-bold text-small">IBM Verify Identity Protection Tech Sales (Level 3)</h3>
         <p class="text-small text-gray">ID: SR008226 | May 2025</p>
         <a href="https://www.credly.com/badges/472b45dd-c853-4e7c-80c9-73745e342724/public_url" target="_blank" class="text-blue font-bold">Verify Credential →</a>
       </div>
 
-      <div class="cert-card">
+      <div class="cert-card reveal">
         <i class="fas fa-fingerprint icon-large text-blue"></i>
         <h3 class="font-bold text-small">IBM Verify Identity Protection Sales Foundation (Level 2)</h3>
         <p class="text-small text-gray">ID: SRU0112 | May 2025</p>
         <a href="https://www.credly.com/badges/cad58ed5-d827-467d-84b6-8e201708a566/public_url" target="_blank" class="text-blue font-bold">Verify Credential →</a>
       </div>
 
-      <div class="cert-card">
+      <div class="cert-card reveal">
         <i class="fas fa-vault icon-large text-blue"></i>
         <h3 class="font-bold text-small">IBM Verify Privileged Identity Sales Foundation</h3>
         <p class="text-small text-gray">ID: SRU0081 | May 2025</p>
@@ -174,8 +181,8 @@
     <h2 class="heading-xxl section-title">Featured Projects</h2>
     <div class="project-grid">
 
-      <!-- Project 1: ISIM & AD -->
-      <div class="project-card project-blue large">
+      <!-- Project 1: ISIM & AD (FULL DETAILS RESTORED) -->
+      <div class="project-card project-blue large reveal">
         <div class="project-header">
           <h3 class="heading-xl">IBM ISIM & Active Directory Full Deployment</h3>
           <span class="badge badge-blue">IAM Case Study</span>
@@ -188,41 +195,65 @@
             <i class="fas fa-chevron-down"></i>
           </summary>
           <div class="dropdown-content">
-            <p><strong>🔧 Environment Summary:</strong></p>
-            <div class="info-grid">
+            
+            <p class="font-bold text-blue mb-2">🔧 Environment Summary:</p>
+            <div class="info-grid mb-4">
               <div><strong>Platform:</strong> VMware Workstation</div>
-              <div><strong>Network:</strong> 192.168.10.0/24</div>
-              <div><strong>ISIM:</strong> IBM Security Verify Governance</div>
-              <div><strong>AD:</strong> Windows Server 2016+</div>
+              <div><strong>Network:</strong> 192.168.10.0/24 (Bridged)</div>
+              <div><strong>ISIM Version:</strong> IBM Security Verify Governance</div>
+              <div><strong>AD Version:</strong> Windows Server 2016+</div>
               <div><strong>Database:</strong> IBM DB2</div>
               <div><strong>LDAP:</strong> IBM SDS 6.4</div>
               <div><strong>SDI:</strong> 7.2 with RMI Dispatcher</div>
+              <div><strong>Solution Dir:</strong> timsol</div>
             </div>
 
-            <p><strong>🚀 8-Phase Deployment:</strong></p>
-            <ol>
-              <li><strong>VMware Setup:</strong> Provisioned VMs, bridged networking</li>
-              <li><strong>DB2:</strong> Installed, configured ISIM schema</li>
-              <li><strong>SDS 6.4:</strong> LDAP directory server</li>
-              <li><strong>ISIM Appliance:</strong> Installed, hardened security</li>
-              <li><strong>SDI 7.2:</strong> RMI Dispatcher, AD Adapter</li>
-              <li><strong>Active Directory:</strong> Domain controller, OUs</li>
-              <li><strong>Integration:</strong> AD with ISIM provisioning</li>
-              <li><strong>Policies:</strong> Joiner/Mover/Leaver rules</li>
+            <p class="font-bold text-blue mb-2">📐 Architecture Overview:</p>
+            <pre class="architecture-diagram mb-4">
+ISIM Appliance → DB2 (Identity Backend)
+             ↓
+         LDAP (SDS 6.4) → Central User Repo
+             ↓
+          SDI 7.2 → Provisioning Engine
+             ↓
+    RMI Dispatcher → AD Adapter
+             ↓
+      Active Directory → Managed Resource
+            </pre>
+
+            <p class="font-bold text-blue mb-2">🚀 8-Phase Deployment Sequence:</p>
+            <ol class="mb-4">
+              <li><strong>Phase 1: VMware Infrastructure Setup:</strong> Provisioned VMs, configured bridged networking (192.168.10.0/24), assigned static IPs, validated DNS configuration.</li>
+              <li><strong>Phase 2: IBM DB2 Deployment:</strong> Installed DB2 instance, configured ISIM schema, initialized database for identity backend storage.</li>
+              <li><strong>Phase 3: IBM SDS 6.4 (LDAP):</strong> Stood up LDAP directory server, configured solution directory (timsol), validated directory structure and replication.</li>
+              <li><strong>Phase 4: ISIM/ISVG Appliance:</strong> Installed ISIM virtual appliance, configured JVM properties, mail servers, workflow engines, hardened security settings.</li>
+              <li><strong>Phase 5: SDI 7.2 + RMI Dispatcher:</strong> Deployed SDI with RMI Dispatcher on Windows Server, configured Active Directory Adapter, mapped user/group attributes.</li>
+              <li><strong>Phase 6: Active Directory Setup:</strong> Deployed Windows Server AD, created domain controller, organizational units (OUs), user accounts, group policies.</li>
+              <li><strong>Phase 7: Integration & Provisioning:</strong> Integrated AD with ISIM as managed resource, configured automated User Provisioning/De-provisioning workflows.</li>
+              <li><strong>Phase 8: Policy Definition:</strong> Established Provisioning Policies, Identity Policies, Lifecycle Rules (Joiner/Mover/Leaver) for automated account creation based on AD groups.</li>
             </ol>
 
-            <p><strong>✅ Verified:</strong> ISIM, DB2, LDAP, SDI | <strong>🔄 In Progress:</strong> ISAM integration</p>
+            <p class="font-bold text-blue mb-2">💡 Key Technical Decisions & Troubleshooting:</p>
+            <ul class="mb-4">
+              <li>JVM isolation for ISIM appliance stability under load</li>
+              <li>RMI port behavior for Dispatcher-AD communication (port validation)</li>
+              <li>VM snapshot strategy for rapid recovery during testing</li>
+              <li>Internal DNS approach for network resolution</li>
+              <li>AD as central identity source for both ISIM provisioning and ISAM authentication</li>
+            </ul>
+
+            <p><strong>✅ Verified Components:</strong> ISIM Appliance, DB2, LDAP, SDI, Dispatcher | <strong>🔄 In Progress:</strong> ISAM integration with ISIM+AD</p>
           </div>
         </details>
       </div>
 
       <!-- Project 2: Cypulse -->
-      <div class="project-card project-purple">
+      <div class="project-card project-purple reveal">
         <div class="project-header">
           <h3 class="heading-lg">Cypulse - Cybersecurity Platform</h3>
           <span class="badge badge-purple">MERN Stack</span>
         </div>
-        <p class="text-gray text-small mb-4">Secure cybersecurity platform built with MERN stack + Ionic React mobile app.</p>
+        <p class="text-gray text-small mb-4">Secure cybersecurity platform built with MERN stack + Ionic React mobile app for cross-platform delivery.</p>
 
         <details class="dropdown">
           <summary class="dropdown-summary text-small">
@@ -232,10 +263,10 @@
           <div class="dropdown-content text-small">
             <p><strong>🛠️ Tech Stack:</strong></p>
             <ul>
-              <li>Frontend: React.js + CSS</li>
+              <li>Frontend: React.js + Tailwind CSS</li>
               <li>Backend: Node.js + Express.js</li>
               <li>Database: MongoDB</li>
-              <li>Mobile: Ionic React</li>
+              <li>Mobile: Ionic React (Cross-platform)</li>
             </ul>
           </div>
         </details>
@@ -246,12 +277,12 @@
       </div>
 
       <!-- Project 3: ISVP PAM -->
-      <div class="project-card project-emerald">
+      <div class="project-card project-emerald reveal">
         <div class="project-header">
           <h3 class="heading-lg">IBM Security Verify Privilege (ISVP) PAM</h3>
           <span class="badge badge-emerald">PAM Deployment</span>
         </div>
-        <p class="text-gray text-small mb-4">Full-scale PAM solution using IBM Security Verify Privilege (Delinea) in sandbox.</p>
+        <p class="text-gray text-small mb-4">Full-scale Privileged Access Management solution using IBM Security Verify Privilege (powered by Delinea) in sandbox environment.</p>
 
         <details class="dropdown">
           <summary class="dropdown-summary text-small">
@@ -259,65 +290,99 @@
             <i class="fas fa-chevron-down"></i>
           </summary>
           <div class="dropdown-content text-small">
-            <p><strong>📅:</strong> May 2026 – Present | <strong>🏢:</strong> SPS Inc.</p>
-            <p><strong>🎯 Components:</strong></p>
-            <ul>
+            <p><strong>📅 Timeline:</strong> May 2026 – Present | <strong>🏢 Associated:</strong> Software Productivity Strategists, Inc. (SPS)</p>
+            
+            <p class="font-bold text-emerald mb-2">🎯 Core Components Deployed:</p>
+            <ul class="mb-4">
               <li>IBM Security Verify Privilege Vault</li>
               <li>IBM Security Verify Privilege Manager</li>
             </ul>
-            <p><strong>🔧 Environment:</strong></p>
-            <ul>
-              <li>VMware Workstation Pro + Windows Server 2022</li>
-              <li>SQL Server 2022 Express</li>
-              <li>IIS Web Server</li>
+            
+            <p class="font-bold text-emerald mb-2">🔧 Tools & Environment:</p>
+            <div class="info-grid mb-4">
+              <div><strong>Hypervisor:</strong> VMware Workstation Pro</div>
+              <div><strong>OS:</strong> Windows Server 2022</div>
+              <div><strong>Database:</strong> SQL Server 2022 Express</div>
+              <div><strong>Web Server:</strong> Internet Information Services (IIS)</div>
+            </div>
+            
+            <p class="font-bold text-emerald mb-2">⚙️ Technical Execution & Troubleshooting:</p>
+            <ul class="mb-4">
+              <li>Built out Windows Server environment from scratch, assigning static configurations to ensure stable domain pathways</li>
+              <li>Configured and hardened IIS web application layer to host primary PAM interfaces securely</li>
+              <li>Resolved critical SQL Server installation blockers, troubleshooting database connectivity issues and fixing specific collation settings required for backend database integration</li>
+              <li>Validated end-to-end communication across key network ports to ensure seamless authentication and vault reliability</li>
             </ul>
-            <p><strong>⚙️ Execution:</strong></p>
-            <ul>
-              <li>Built Windows Server from scratch</li>
-              <li>Hardened IIS for PAM interfaces</li>
-              <li>Resolved SQL Server blockers</li>
-              <li>Validated network port communication</li>
-            </ul>
-            <p><strong>🔄 Status:</strong> AD integration in-progress</p>
+            
+            <p><strong>🔄 Current Status:</strong> Integration with Active Directory in-progress</p>
           </div>
         </details>
       </div>
 
-      <!-- Project 4: ISAM/ISVA -->
-      <div class="project-card project-cyan large">
+      <!-- Project 4: ISAM/ISVA (PROFESSIONAL - NO EXACT IPs) -->
+      <div class="project-card project-cyan large reveal">
         <div class="project-header">
           <h3 class="heading-xl">ISAM/ISVA Deployment & ISIM+AD Integration</h3>
           <span class="badge badge-cyan">Access Management</span>
         </div>
-        <p class="text-gray mb-6">ISAM appliance with dual-network interfaces for LMI and WRP, integrated with ISIM and AD.</p>
+        <p class="text-gray mb-6">Deployed ISAM appliance with dual-network interface architecture for administrative (LMI) and runtime (Web Reverse Proxy) traffic isolation, integrated with ISIM and Active Directory.</p>
 
         <details class="dropdown">
           <summary class="dropdown-summary">
-            View Full Blueprint (5 Phases)
+            View Full Deployment Blueprint (5 Phases + Integration)
             <i class="fas fa-chevron-down"></i>
           </summary>
           <div class="dropdown-content">
-            <p><strong>🏠 IP Architecture:</strong></p>
-            <div class="info-table">
-              <div><strong>ISAM Management (eth0):</strong> 192.168.10.220 → LMI dashboard</div>
-              <div><strong>ISAM Runtime (eth1):</strong> 192.168.10.221 → Web Reverse Proxy</div>
-              <div><strong>ISIM Range:</strong> 192.168.10.200-202 → Identity lifecycle</div>
-              <div><strong>Windows Server:</strong> 192.168.10.210 → LDAP for ISAM</div>
+            
+            <p class="font-bold text-cyan mb-2">🏠 Network Architecture Design:</p>
+            <p class="mb-3">ISAM appliance utilizes separate virtual network interfaces (NICs) to isolate administrative traffic from user application traffic. Logical design follows enterprise segmentation best practices:</p>
+            
+            <div class="info-table mb-4">
+              <div><strong>Management Interface (eth0):</strong> Dedicated NIC for Local Management Interface (LMI) dashboard and SSH console access</div>
+              <div><strong>Runtime Interface (eth1):</strong> Dedicated NIC for Web Reverse Proxy (WRP) junctions handling employee/user traffic</div>
+              <div><strong>ISIM Integration Range:</strong> Pre-configured IP range for identity lifecycle management and provisioning source</div>
+              <div><strong>User Registry (LDAP):</strong> Windows Server instance acting as primary user registry for ISAM authentication</div>
             </div>
 
-            <p><strong>🚀 Deployment phases:</strong></p>
-            <ol>
-              <li><strong>OVA Deploy:</strong> 2 network adapters, VMware Workstation</li>
-              <li><strong>CLI Setup:</strong> admin/admin → change password</li>
-              <li><strong>Management IP:</strong> 192.168.10.220, static</li>
-              <li><strong>Web LMI:</strong> https://192.168.10.220:443 → Setup Wizard</li>
-              <li><strong>App Interface:</strong> eth1 → 192.168.10.221</li>
+            <p class="font-bold text-cyan mb-2">🚀 Phase-by-Phase Deployment Blueprint:</p>
+            <ol class="mb-4">
+              <li>
+                <p><strong>Phase 1: OVA Template Deployment (Hypervisor Setup)</strong></p>
+                <p class="text-small ml-4">Deployed ISAM/ISVA OVA file in VMware Workstation/ESXi hypervisor. Provisioned 2 network adapters mapped to lab port group/vSwitch (bridged to internal lab network). Configured Adapter 1 for management traffic and Adapter 2 for application routing. Powered on VM.</p>
+              </li>
+              <li>
+                <p><strong>Phase 2: Initial Boot & Hardware CLI Setup</strong></p>
+                <p class="text-small ml-4">Opened VM console, logged in with default credentials (admin/admin), acknowledged license agreement, and changed admin password. Entered CLI configuration wizard for network baseline setup.</p>
+              </li>
+              <li>
+                <p><strong>Phase 3: Management IP Baseline Assignment</strong></p>
+                <p class="text-small ml-4">Configured management interface (management1/eth0) with static IP configuration: IP Type set to Static, assigned lab IP address, subnet mask, and gateway. Pressed Ctrl+C to save and apply settings. LMI engine restarted automatically.</p>
+              </li>
+              <li>
+                <p><strong>Phase 4: Web LMI Setup Wizard</strong></p>
+                <p class="text-small ml-4">Navigated to LMI web interface via browser (HTTPS). Initial Setup Wizard launched automatically. Defined appliance hostname (e.g., isam-lab.local), configured primary and alternate DNS servers, activated core modules: Policy Server and Web Reverse Proxy.</p>
+              </li>
+              <li>
+                <p><strong>Phase 5: Application Interface Configuration</strong></p>
+                <p class="text-small ml-4">Accessed system settings via LMI dashboard, enabled second interface (eth1), assigned static application IP for runtime traffic. Saved and deployed changes. Verified interface separation for LMI vs. WRP traffic.</p>
+              </li>
             </ol>
 
-            <p><strong>🔗 Integration:</strong></p>
-            <ul>
-              <li>LDAP: 192.168.10.210 (Port 389)</li>
-              <li>ISIM: 192.168.10.200 → Policy Server</li>
+            <p class="font-bold text-cyan mb-2">🔗 Core Integration Configuration:</p>
+            
+            <p class="font-bold text-small mb-1">1. Directory Server Integration (External LDAP):</p>
+            <ul class="mb-3 text-small">
+              <li>Targeted Windows Server instance as primary user registry</li>
+              <li>Configured LDAP connection: Host, Port (389 for standard, 636 for SSL), Administrator DN</li>
+              <li>Validated LDAP authentication pathway for ISAM runtime component</li>
+            </ul>
+
+            <p class="font-bold text-small mb-1">2. ISIM Connection Loop (Policy Server):</p>
+            <ul class="text-small">
+              <li>Navigated to Secure Web Settings > Manage > Policy Server</li>
+              <li>Ensured security sockets listening for incoming connection handshakes from ISIM subnet</li>
+              <li>Enabled ISIM-to-ISAM provisioning loop for automated access control management</li>
+              <li>Validated cross-component communication for identity lifecycle synchronization</li>
             </ul>
           </div>
         </details>
