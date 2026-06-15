@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhammad Huzaifa | IAM Consultant</title>
+  <title>Muhammad Huzaifa | IAM Security Analyst & Resident Engineer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,14 +13,14 @@
   <div class="nav-container">
     <span class="nav-logo"><i class="fas fa-shield-alt"></i> MH.</span>
     <div class="nav-links">
-      <a href="#home" class="nav-link">Home</a>
+      <a href="#home" class="nav-link active">Home</a>
       <a href="#experience" class="nav-link">Experience</a>
       <a href="#certifications" class="nav-link">Certifications</a>
       <a href="#projects" class="nav-link">Projects</a>
       <a href="#resume-view" class="nav-link">Resume</a>
-      <a href="#contact" class="nav-link active">Contact</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </div>
-    <button id="mobileMenuBtn" class="mobile-btn"><i class="fas fa-bars"></i></button>
+    <button id="mobileMenuBtn" class="mobile-btn" aria-label="Toggle Navigation Menu"><i class="fas fa-bars"></i></button>
   </div>
   <div id="mobileMenu" class="mobile-menu">
     <a href="#home" class="mobile-link">Home</a>
@@ -33,68 +33,69 @@
 </nav>
 
 <section id="home" class="section hero">
-  <div class="container">
-    <img src="huzaifa.jpeg" alt="Profile" class="profile-img">
+  <div class="container hero-container">
+    <div class="profile-wrapper">
+      <img src="huzaifa.jpeg" alt="Muhammad Huzaifa" class="profile-img">
+      <div class="profile-pulse"></div>
+    </div>
     <h1 class="heading-xl">Muhammad Huzaifa Bin Arif</h1>
-    <p class="heading-lg text-blue">IAM Consultant | Resident Engineer | Full Stack Developer</p>
-    <p class="description">Enterprise Identity & Access Management (IBM Security) and Secure Full Stack Development.</p>
+    <p class="heading-lg text-blue">IAM Security Analyst | Resident Engineer | Full Stack Developer</p>
+    <p class="description">Architecting Enterprise Identity & Access Governance infrastructure using the IBM Security stack, alongside secure, modern full-stack application development.</p>
     <div class="button-group">
       <a href="#contact" class="btn btn-primary">Contact Me</a>
-      <a href="resume.pdf" download class="btn btn-secondary">Download CV</a>
+      <a href="resume.pdf" download class="btn btn-secondary"><i class="fas fa-cloud-download-alt"></i> Download CV</a>
     </div>
   </div>
 </section>
 
 <section id="experience" class="section experience">
   <div class="container">
-    <h2 class="heading-xxl section-title">Experience</h2>
+    <h2 class="heading-xxl section-title reveal">Professional Experience</h2>
     <div class="experience-grid">
       
-      <div class="experience-card card-blue">
+      <div class="experience-card card-blue reveal">
         <div class="card-marker"></div>
         <div class="card-header">
           <h3 class="card-title">IAM Consultant — Resident Engineer</h3>
           <p class="card-company">Software Productivity Strategists, Inc</p>
-          <p class="card-date">Apr 2025 – Present</p>
+          <p class="card-date"><i class="far fa-calendar-alt"></i> Apr 2025 – Present</p>
         </div>
         <div class="card-content">
-          <p class="section-desc">Serving as Resident Engineer at Askari Bank HQ, managing full-lifecycle IAM infrastructure.</p>
+          <p class="section-desc">Stationed as Resident Engineer at Askari Bank HQ, overseeing the architecture, lifecycle infrastructure adjustments, and execution workflows of critical access environments.</p>
           <h4 class="subsection-title"><i class="fas fa-server"></i> Core Deployments:</h4>
           <ul class="feature-list">
-            <li><strong>IBM Stack IAM:</strong> Deployed ISIM/ISVG, ISAM/ISVA, ISVP/PAM</li>
-            <li><strong>Directory Services:</strong> AD integrated with ISIM & ISAM; PAM in-progress</li>
-            <li><strong>Upgrades:</strong> ISIM & ISAM upgrades for performance & compliance</li>
+            <li><strong>IBM Stack Management:</strong> Deployed and orchestrated IBM Security Identity Manager (ISIM v10.0 stream / ISVG maintenance updates), IBM Security Access Manager (ISAM v10.0.8), and IBM Security Verify Privilege (ISVP/PAM).</li>
+            <li><strong>Directory Infrastructure:</strong> Maintained enterprise Active Directory integrations coupled with internal SDS and SDI systems.</li>
+            <li><strong>Lifecycle Migrations:</strong> Engineered database validation workflows and structural schema transitions to maintain uninterrupted identity sync loops.</li>
           </ul>
           <h4 class="subsection-title"><i class="fas fa-building"></i> On-Site Operations:</h4>
           <ul class="feature-list">
-            <li><strong>Daily Ops:</strong> User onboarding, offboarding, role provisioning</li>
-            <li><strong>Support:</strong> Primary technical contact for access issues</li>
-            <li><strong>Governance:</strong> RBAC/ABAC, MFA, SSO policies</li>
+            <li><strong>Governance Strategy:</strong> Implemented precise RBAC/ABAC mappings, custom Single Sign-On (SSO) junctions, and automated provisioning policies.</li>
+            <li><strong>Incident Leadership:</strong> Acted as Tier-3 escalation point for resolving database connection traps, certificate handshakes, and directory synchronization boundaries.</li>
           </ul>
         </div>
       </div>
 
-      <div class="experience-card card-purple">
+      <div class="experience-card card-purple reveal">
         <div class="card-marker"></div>
         <div class="card-header">
           <h3 class="card-title">Software Developer & IT Manager</h3>
-          <p class="card-company">VisionTech360</p>
-          <p class="card-date">Apr 2024 – Mar 2025</p>
+          <p class="card-company">VisionTech360 & Innovista</p>
+          <p class="card-date"><i class="far fa-calendar-alt"></i> Apr 2024 – Mar 2025</p>
         </div>
         <div class="card-content">
-          <p class="section-desc">MERN Stack & ASP.NET MVC development. ArcGIS GIS solutions. ASP.NET Identity authentication.</p>
-          <h4 class="subsection-title"><i class="fas fa-laptop-code"></i> Achievements:</h4>
+          <p class="section-desc">Managed dual responsibilities spanning enterprise web application engineering, infrastructure protection, and GIS integration engines.</p>
+          <h4 class="subsection-title"><i class="fas fa-laptop-code"></i> Full-Stack Engineering & GIS:</h4>
           <ul class="feature-list">
-            <li>Web apps: MERN Stack + ASP.NET MVC</li>
-            <li>GIS: ArcGIS with ASP.NET</li>
-            <li>Auth: ASP.NET Identity</li>
-            <li>Cypulse: MERN + Ionic React mobile app</li>
+            <li><strong>Framework Engineering:</strong> Built scalable systems using the MERN Stack and ASP.NET MVC architectures.</li>
+            <li><strong>Spatial Implementations:</strong> Designed and embedded custom map and geographic layout components utilizing ArcGIS integrations.</li>
+            <li><strong>Identity Controls:</strong> Locked down local systems using standard ASP.NET Identity authentication frameworks.</li>
+            <li><strong>Mobile Operations:</strong> Shipped Cypulse, cross-platform app leveraging Ionic React for real-time security tracking.</li>
           </ul>
-          <h4 class="subsection-title highlight"><i class="fas fa-briefcase"></i> Innovista (IT Manager):</h4>
+          <h4 class="subsection-title highlight"><i class="fas fa-briefcase"></i> Innovista IT Management:</h4>
           <ul class="feature-list">
-            <li>VistaMart.biz e-commerce platform</li>
-            <li>Security & performance optimization</li>
-            <li>Team leadership</li>
+            <li>Directed technical infrastructure operations and team resource allocation for the VistaMart.biz platform.</li>
+            <li>Optimized application execution paths to maintain high uptime and speed metrics.</li>
           </ul>
         </div>
       </div>
@@ -105,43 +106,44 @@
 
 <section id="certifications" class="section certifications">
   <div class="container">
-    <h2 class="heading-xxl section-title">IBM Certifications</h2>
+    <h2 class="heading-xxl section-title reveal">IBM Technical Certifications</h2>
     <div class="cert-grid">
-      <div class="cert-card cert-blue">
+      <div class="cert-card cert-blue reveal">
+        <div class="cert-glow"></div>
         <i class="fas fa-shield-virus cert-icon"></i>
         <h3 class="cert-title">Guardium Data Security Tech Sales Intermediate</h3>
-        <p class="cert-id">ID: BG-93142dc2c12d46ee95011ffa3f649 | Feb 2026</p>
-        <a href="https://www.credly.com/badges/5948aebc-ec28-4f7f-8ac9-a1e6cb236df0/public_url" class="cert-link">Verify →</a>
+        <p class="cert-id">Feb 2026</p>
+        <a href="https://www.credly.com/badges/5948aebc-ec28-4f7f-8ac9-a1e6cb236df0/public_url" target="_blank" class="cert-link">Verify Credential <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="cert-card">
+      <div class="cert-card reveal">
         <i class="fas fa-certificate cert-icon"></i>
         <h3 class="cert-title">Guardium Data Security Sales Foundation</h3>
-        <p class="cert-id">ID: BG-7bce6b8a94853652ce600ee2469db | Feb 2026</p>
-        <a href="https://www.credly.com/badges/8c1d8dd1-26f5-44f5-b3f4-3454091d5b53/public_url" class="cert-link">Verify →</a>
+        <p class="cert-id">Feb 2026</p>
+        <a href="https://www.credly.com/badges/8c1d8dd1-26f5-44f5-b3f4-3454091d5b53/public_url" target="_blank" class="cert-link">Verify Credential <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="cert-card">
+      <div class="cert-card reveal">
         <i class="fas fa-shield-halved cert-icon"></i>
         <h3 class="cert-title">IBM Verify Privilege Tech Sales Intermediate</h3>
-        <p class="cert-id">ID: SR007686 | May 2025</p>
-        <a href="https://www.credly.com/badges/dfbc4eed-8afb-42fc-a4f6-dea993028759/public_url" class="cert-link">Verify →</a>
+        <p class="cert-id">May 2025</p>
+        <a href="https://www.credly.com/badges/dfbc4eed-8afb-42fc-a4f6-dea993028759/public_url" target="_blank" class="cert-link">Verify Credential <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="cert-card">
+      <div class="cert-card reveal">
         <i class="fas fa-user-shield cert-icon"></i>
         <h3 class="cert-title">IBM Verify Identity Protection Tech Sales (L3)</h3>
-        <p class="cert-id">ID: SR008226 | May 2025</p>
-        <a href="https://www.credly.com/badges/472b45dd-c853-4e7c-80c9-73745e342724/public_url" class="cert-link">Verify →</a>
+        <p class="cert-id">May 2025</p>
+        <a href="https://www.credly.com/badges/472b45dd-c853-4e7c-80c9-73745e342724/public_url" target="_blank" class="cert-link">Verify Credential <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="cert-card">
+      <div class="cert-card reveal">
         <i class="fas fa-fingerprint cert-icon"></i>
         <h3 class="cert-title">IBM Verify Identity Protection Sales Foundation (L2)</h3>
-        <p class="cert-id">ID: SRU0112 | May 2025</p>
-        <a href="https://www.credly.com/badges/cad58ed5-d827-467d-84b6-8e201708a566/public_url" class="cert-link">Verify →</a>
+        <p class="cert-id">May 2025</p>
+        <a href="https://www.credly.com/badges/cad58ed5-d827-467d-84b6-8e201708a566/public_url" target="_blank" class="cert-link">Verify Credential <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="cert-card">
+      <div class="cert-card reveal">
         <i class="fas fa-vault cert-icon"></i>
         <h3 class="cert-title">IBM Verify Privileged Identity Sales Foundation</h3>
-        <p class="cert-id">ID: SRU0081 | May 2025</p>
-        <a href="https://www.credly.com/badges/5ae9de83-b314-4575-8b6a-3b318695dc28/public_url" class="cert-link">Verify →</a>
+        <p class="cert-id">May 2025</p>
+        <a href="https://www.credly.com/badges/5ae9de83-b314-4575-8b6a-3b318695dc28/public_url" target="_blank" class="cert-link">Verify Credential <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
@@ -149,120 +151,108 @@
 
 <section id="projects" class="section projects">
   <div class="container">
-    <h2 class="heading-xxl section-title">Featured Projects</h2>
+    <h2 class="heading-xxl section-title reveal">Featured Engineering Case Studies</h2>
     <div class="project-grid">
 
-      <div class="project-card project-blue large">
+      <div class="project-card project-blue large reveal">
         <div class="project-header">
           <h3 class="project-title">IBM ISIM & Active Directory Full Deployment</h3>
-          <span class="badge badge-blue">IAM Case Study</span>
+          <span class="badge badge-blue">Identity Governance</span>
         </div>
-        <p class="project-desc">Enterprise ISIM + AD deployment for automated lifecycle management (Joiner/Mover/Leaver).</p>
+        <p class="project-desc">Complete end-to-end sandbox and production blueprinting of IBM Security Identity Manager infrastructure mapping automated lifecycle transitions.</p>
         <div class="card-content">
-          <h4 class="subsection-title"><i class="fas fa-cogs"></i> Environment:</h4>
+          <h4 class="subsection-title"><i class="fas fa-cogs"></i> Infrastructure Topography:</h4>
           <div class="info-grid">
-            <div><strong>Platform:</strong> VMware</div>
-            <div><strong>ISIM:</strong> IBM Verify Governance</div>
-            <div><strong>AD:</strong> Windows Server 2016+</div>
-            <div><strong>DB:</strong> IBM DB2</div>
-            <div><strong>LDAP:</strong> IBM SDS 6.4</div>
-            <div><strong>SDI:</strong> 7.2 + RMI</div>
+            <div><strong>Hypervisor:</strong> VMware vSphere / ESXi Cluster</div>
+            <div><strong>Identity Core:</strong> IBM Verify Governance v10.0 Stream</div>
+            <div><strong>Database Layer:</strong> IBM DB2 Enterprise (Configured Schemas)</div>
+            <div><strong>Directory Server:</strong> IBM SDS v6.4 (Configured Tree Base)</div>
+            <div><strong>Middleware Engine:</strong> IBM SDI v7.2 + Remote Method Invocation (RMI)</div>
+            <div><strong>External Target:</strong> Active Directory (Windows Server 2016/2022)</div>
           </div>
-          <h4 class="subsection-title"><i class="fas fa-list-ol"></i> 8 Phases:</h4>
+          <h4 class="subsection-title"><i class="fas fa-project-diagram"></i> Core Technical Implementation Phases:</h4>
           <ol class="phase-list">
-            <li>VMware: VMs, bridged networking, static IPs</li>
-            <li>DB2: Instance + ISIM schema</li>
-            <li>SDS 6.4: LDAP directory server</li>
-            <li>ISIM: Appliance + JVM + workflows</li>
-            <li>SDI 7.2: RMI + AD Adapter</li>
-            <li>AD: Domain controller + OUs</li>
-            <li>Integration: AD ↔ ISIM provisioning</li>
-            <li>Policies: Joiner/Mover/Leaver rules</li>
+            <li><strong>Virtual Networking:</strong> Built dedicated VMware machines isolating communication pathways with static IPs.</li>
+            <li><strong>Data Instance Preparation:</strong> Deployed DB2 database parameters, applied tablespace allocations, and populated the base IAM core schema.</li>
+            <li><strong>LDAP Suffix Mapping:</strong> Formed custom structural directories inside SDS v6.4 to process account objects cleanly.</li>
+            <li><strong>Engine Bootstrapping:</strong> Managed initial application cluster setups, adjusted underlying JVM properties, and mapped workflow boundaries.</li>
+            <li><strong>Synchronization Bridges:</strong> Mounted SDI v7.2 engines, mapped transport handshakes, and deployed target Active Directory agents.</li>
+            <li><strong>Automated Business Logic:</strong> Engineered processing controls managing corporate Joiner, Mover, and Leaver events automatically.</li>
+            <li><strong>Maintenance Engineering:</strong> Managed system updates utilizing specific ISIM v10.0.0.4 application patches.</li>
           </ol>
           <div class="status-badge">
-            <span class="status-verified">✅ Verified: ISIM, DB2, LDAP, SDI</span>
-            <span class="status-progress">🔄 In Progress: ISAM</span>
+            <span class="status-verified"><i class="fas fa-check-circle"></i> Production Integration Validated: ISIM, DB2, LDAP, SDI Engine Loops</span>
           </div>
         </div>
       </div>
 
-      <div class="project-card project-purple">
+      <div class="project-card project-purple reveal">
         <div class="project-header">
-          <h3 class="project-title">Cypulse - Cybersecurity Platform</h3>
-          <span class="badge badge-purple">MERN Stack</span>
+          <h3 class="project-title">Cypulse - Security Platform</h3>
+          <span class="badge badge-purple">MERN & Mobile Stack</span>
         </div>
-        <p class="project-desc">Cybersecurity platform + Ionic React mobile app.</p>
+        <p class="project-desc">A responsive cybersecurity metrics dashboard coupled to a unified mobile tracking interface.</p>
         <div class="card-content">
-          <h4 class="subsection-title"><i class="fas fa-laptop"></i> Tech Stack:</h4>
+          <h4 class="subsection-title"><i class="fas fa-laptop"></i> Framework Stack:</h4>
           <ul class="tech-list">
-            <li>React.js + Tailwind CSS</li>
-            <li>Node.js + Express.js</li>
-            <li>MongoDB</li>
-            <li>Ionic React (Cross-platform)</li>
+            <li>React.js + Tailwind CSS UI Engines</li>
+            <li>Node.js & Express API Web Layer</li>
+            <li>MongoDB Document Storage Clustered Models</li>
+            <li>Ionic React Cross-Platform Mobile Deployment</li>
           </ul>
         </div>
-        <a href="https://huzaifaarifawan.github.io/cypulse-frontend/" target="_blank" class="project-link btn btn-purple">Visit →</a>
+        <a href="https://huzaifaarifawan.github.io/cypulse-frontend/" target="_blank" class="project-link btn btn-purple">Explore Platform <i class="fas fa-external-link-alt"></i></a>
       </div>
 
-      <div class="project-card project-emerald">
+      <div class="project-card project-emerald reveal">
         <div class="project-header">
-          <h3 class="project-title">IBM Security Verify Privilege (ISVP) PAM</h3>
-          <span class="badge badge-emerald">PAM</span>
+          <h3 class="project-title">IBM Verify Privilege (ISVP) PAM Architecture</h3>
+          <span class="badge badge-emerald">Privileged Access</span>
         </div>
-        <p class="project-desc">Full-scale PAM using IBM Security Verify Privilege (Delinea).</p>
+        <p class="project-desc">Full deployment of enterprise-grade Privileged Access Management structures built to track, vault, and dynamically rotate high-impact corporate infrastructure credentials.</p>
         <div class="card-content">
-          <p><strong>📅:</strong> May 2026 – Present | <strong>🏢:</strong> SPS Inc.</p>
-          <h4 class="subsection-title"><i class="fas fa-box"></i> Components:</h4>
-          <ul class="feature-list">
-            <li>ISVP Vault</li>
-            <li>ISVP Manager</li>
-          </ul>
-          <h4 class="subsection-title"><i class="fas fa-tools"></i> Environment:</h4>
+          <h4 class="subsection-title"><i class="fas fa-tools"></i> Platform Specifications:</h4>
           <div class="info-grid">
-            <div><strong>Hypervisor:</strong> VMware</div>
-            <div><strong>OS:</strong> Windows Server 2022</div>
-            <div><strong>DB:</strong> SQL Server 2022</div>
-            <div><strong>Web:</strong> IIS</div>
+            <div><strong>OS Base:</strong> Windows Server 2022</div>
+            <div><strong>Storage:</strong> MS SQL Server 2022</div>
+            <div><strong>Web Engine:</strong> Hardened IIS 10</div>
+            <div><strong>Core:</strong> ISVP Vault Engine</div>
           </div>
-          <h4 class="subsection-title"><i class="fas fa-check"></i> Execution:</h4>
+          <h4 class="subsection-title"><i class="fas fa-shield-alt"></i> Engineering Milestones:</h4>
           <ul class="feature-list">
-            <li>Windows Server from scratch + static configs</li>
-            <li>Hardened IIS for PAM interfaces</li>
-            <li>Resolved SQL Server blockers + collation</li>
-            <li>Validated network ports</li>
+            <li><strong>Server Hardening:</strong> Configured vanilla operating images with isolated static network route tables.</li>
+            <li><strong>Web Layer Defense:</strong> Enabled customized IIS web server endpoints utilizing explicit TLS configurations and certificate binds.</li>
+            <li><strong>Conflict Engineering:</strong> Patched structural collation and timeout conflicts during initial SQL Server installations.</li>
+            <li><strong>Transport Security:</strong> Monitored port allocations to guarantee secure token processing paths.</li>
           </ul>
-          <div class="status-badge"><span class="status-progress">🔄 AD Integration in-progress</span></div>
+          <div class="status-badge"><span class="status-verified"><i class="fas fa-check-circle"></i> Vault Node Operations Verified</span></div>
         </div>
       </div>
 
-      <div class="project-card project-cyan large">
+      <div class="project-card project-cyan large reveal">
         <div class="project-header">
-          <h3 class="project-title">ISAM/ISVA Deployment & ISIM+AD Integration</h3>
-          <span class="badge badge-cyan">Access Mgmt</span>
+          <h3 class="project-title">ISAM/ISVA Upgrade & Identity Integration</h3>
+          <span class="badge badge-cyan">Access Management</span>
         </div>
-        <p class="project-desc">ISAM with dual-NIC architecture (LMI + WRP) integrated with ISIM & AD.</p>
+        <p class="project-desc">Architected dual-NIC secure runtime environments via IBM Security Access Manager, culminating in updates to modern IBM Verify Identity Access infrastructure.</p>
         <div class="card-content">
-          <h4 class="subsection-title"><i class="fas fa-network-wired"></i> Architecture:</h4>
+          <h4 class="subsection-title"><i class="fas fa-network-wired"></i> Network Routing Topology:</h4>
           <div class="info-table">
-            <div><strong>eth0 (LMI):</strong> Management interface</div>
-            <div><strong>eth1 (WRP):</strong> Runtime interface</div>
-            <div><strong>ISIM:</strong> Identity lifecycle</div>
-            <div><strong>LDAP:</strong> Windows Server (389/636)</div>
+            <div class="info-row"><strong>eth0 (LMI Management Segment):</strong> Dedicated to dashboard tools and console configuration.</div>
+            <div class="info-row"><strong>eth1 (WRP Traffic Processing Runtime):</strong> Exposed reverse proxy processing incoming directory requests.</div>
+            <div class="info-row"><strong>Directory Integrations:</strong> Active Directory engines running secure TLS connections over explicit ports (389 / 636).</div>
           </div>
-          <h4 class="subsection-title"><i class="fas fa-list-ol"></i> 5 Phases:</h4>
+          <h4 class="subsection-title"><i class="fas fa-terminal"></i> Technical Execution Journey:</h4>
           <ol class="phase-list">
-            <li>OVA: 2 NICs, VMware Workstation</li>
-            <li>CLI: admin/admin → password change</li>
-            <li>eth0: Static management IP</li>
-            <li>LMI: Hostname, DNS, Policy + WRP</li>
-            <li>eth1: Static application IP</li>
+            <li><strong>Pattern Deployments:</strong> Provisioned explicit multi-homed appliance images directly across active hypervisors.</li>
+            <li><strong>Console Initializations:</strong> Handled clean command-line configurations and updated administrative system control profiles.</li>
+            <li><strong>Proxy Engineering:</strong> Structured responsive Reverse Proxies, established routing properties, and coded strict access rules.</li>
+            <li><strong>Ecosystem Bridge:</strong> Wired mutual authentication certificates back into core ISIM processing layers to create dynamic policy loops.</li>
+            <li><strong>IVIA Enterprise Migration:</strong> Supervised structural updates transitioning core systems from ISAM v10.0.8 up to modern IBM Verify Identity Access (IVIA v11.0.2), handling safe schema modifications.</li>
           </ol>
-          <h4 class="subsection-title"><i class="fas fa-link"></i> Integration:</h4>
-          <ul class="feature-list">
-            <li>LDAP: Windows Server (389)</li>
-            <li>ISIM: Security sockets for handshakes</li>
-            <li>Provisioning: ISIM ↔ ISAM loop</li>
-          </ul>
+          <div class="status-badge">
+            <span class="status-verified"><i class="fas fa-check-circle"></i> Migration Verified: WRP Proxies, Active SSO Junctions, IVIA Core Engines</span>
+          </div>
         </div>
       </div>
 
@@ -272,28 +262,30 @@
 
 <section id="resume-view" class="section resume">
   <div class="container">
-    <h2 class="heading-xxl section-title">Resume Preview</h2>
-    <iframe src="resume.pdf" class="resume-pdf"></iframe>
+    <h2 class="heading-xxl section-title reveal">Resume Preview</h2>
+    <div class="resume-wrapper reveal">
+      <iframe src="resume.pdf" class="resume-pdf" title="Curriculum Vitae Preview"></iframe>
+    </div>
   </div>
 </section>
 
 <section id="contact" class="section contact">
   <div class="container">
-    <h2 class="heading-xxl section-title section-title-white">Contact Details</h2>
+    <h2 class="heading-xxl section-title section-title-white reveal">Secure Contact Channels</h2>
     <div class="contact-grid">
-      <div class="contact-item">
+      <div class="contact-item reveal">
         <i class="fas fa-phone contact-icon"></i>
-        <p class="contact-label">Phone</p>
+        <p class="contact-label">Secure Direct Mobile</p>
         <p class="contact-value">+92 318 5125797</p>
       </div>
-      <div class="contact-item">
+      <div class="contact-item reveal">
         <i class="fas fa-envelope contact-icon"></i>
-        <p class="contact-label">Personal</p>
+        <p class="contact-label">Personal Identity Mail</p>
         <a href="mailto:huzaifaarifawan@gmail.com" class="contact-value-link">huzaifaarifawan@gmail.com</a>
       </div>
-      <div class="contact-item">
+      <div class="contact-item reveal">
         <i class="fas fa-briefcase contact-icon"></i>
-        <p class="contact-label">Professional</p>
+        <p class="contact-label">Corporate Secure Mail</p>
         <a href="mailto:muhammad.huzaifa@spsnet.com" class="contact-value-link">muhammad.huzaifa@spsnet.com</a>
       </div>
     </div>
@@ -311,7 +303,7 @@
         <a href="#contact" class="footer-link">Contact</a>
       </div>
     </div>
-    <p>&copy; 2026 Muhammad Huzaifa Bin Arif. All Rights Reserved.</p>
+    <p class="copyright">&copy; 2026 Muhammad Huzaifa Bin Arif. Secure Access Architecture Operations.</p>
   </div>
 </footer>
 
