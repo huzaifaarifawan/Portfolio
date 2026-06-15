@@ -5,12 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muhammad Huzaifa | IAM Consultant & Developer</title>
   
-  <!-- ✅ FIXED: Use Play CDN for immediate styling -->
+  <!-- ✅ FIXED: Tailwind with immediate compilation -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Force immediate Tailwind compilation
-    window.tailwind = { config: { theme: { extend: {} } } };
+    // Force Tailwind to compile immediately
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blue: { 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8' },
+            purple: { 500: '#8b5cf6', 600: '#7c3aed', 700: '#6d28d9' },
+            emerald: { 500: '#10b981', 600: '#059669', 700: '#047857' }
+          }
+        }
+      }
+    };
   </script>
+  
+  <!-- Preload CSS to prevent blank render -->
+  <link rel="preload" href="https://cdn.tailwindcss.com" as="style">
+  <style>
+    body { 
+      opacity: 1 !important; 
+      transition: none !important; 
+    }
+  </style>
   
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -55,13 +74,13 @@
   </div>
 </section>
 
-<!-- Experience Section (MERGED: Innovista → VisionTech360) -->
+<!-- Experience Section (2 Entries: IAM + Merged VisionTech/Innovista) -->
 <section id="experience" class="py-20 bg-white">
   <div class="container mx-auto px-6">
     <h2 class="text-3xl font-bold text-center mb-16 underline decoration-blue-500 decoration-4 underline-offset-8">Experience</h2>
     <div class="max-w-4xl mx-auto space-y-8">
 
-      <!-- IAM Consultant (UPDATED with Full Details) -->
+      <!-- IAM Consultant (FULL DETAILS) -->
       <div class="experience-card border-l-4 border-blue-600 pl-8 relative reveal">
         <div class="absolute -left-[11px] top-6 w-5 h-5 bg-blue-600 rounded-full border-4 border-white"></div>
         <h3 class="text-2xl font-bold">IAM Consultant — Resident Engineer</h3>
@@ -118,7 +137,7 @@
   </div>
 </section>
 
-<!-- Certifications Section (KEPT AS-IS - All 6 IBM Certs) -->
+<!-- Certifications Section (All 6 IBM Certs) -->
 <section id="certifications" class="py-20 bg-slate-50">
   <div class="container mx-auto px-6">
     <h2 class="text-3xl font-bold text-center mb-16 underline decoration-blue-500 decoration-4 underline-offset-8">IBM Certifications</h2>
@@ -170,13 +189,13 @@
   </div>
 </section>
 
-<!-- Featured Projects Section (3 PROJECTS - All with Dropdowns) -->
+<!-- Featured Projects Section (3 PROJECTS: ISIM/AD, Cypulse, PAM, ISAM) -->
 <section id="projects" class="py-20 bg-white">
   <div class="container mx-auto px-6">
     <h2 class="text-3xl font-bold text-center mb-16 underline decoration-blue-500 decoration-4 underline-offset-8">Featured Projects</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- Project 1: ISIM & AD Deployment (FULL DETAILS) -->
+      <!-- Project 1: ISIM & AD Deployment -->
       <div class="project-card reveal border-blue-500 border-2 lg:col-span-2">
         <div class="flex justify-between items-start mb-4">
           <h3 class="text-2xl font-bold">IBM ISIM & Active Directory Full Deployment</h3>
@@ -242,13 +261,13 @@ ISIM Appliance → DB2 (Identity Backend)
         </details>
       </div>
 
-      <!-- Project 2: Cypulse -->
+      <!-- Project 2: Cypulse (Security Features Removed) -->
       <div class="project-card reveal border-purple-500 border-2">
         <div class="flex justify-between items-start mb-4">
           <h3 class="text-xl font-bold">Cypulse - Cybersecurity Platform</h3>
           <span class="bg-purple-600 text-white text-[10px] px-2 py-1 rounded">MERN Stack</span>
         </div>
-        <p class="text-slate-600 mb-4 text-sm">Secure cybersecurity platform featuring hardened authentication and data encryption. Built with MERN stack + Ionic React mobile app.</p>
+        <p class="text-slate-600 mb-4 text-sm">Secure cybersecurity platform built with MERN stack + Ionic React mobile app for cross-platform delivery.</p>
 
         <details class="group border rounded-lg overflow-hidden transition-all duration-300">
           <summary class="flex justify-between items-center p-3 bg-slate-50 cursor-pointer font-bold text-purple-600 hover:bg-slate-100 text-sm">
@@ -263,13 +282,6 @@ ISIM Appliance → DB2 (Identity Backend)
               <li>Database: MongoDB</li>
               <li>Mobile: Ionic React (Cross-platform)</li>
             </ul>
-            <p class="mt-2"><strong>🔐 Security Features:</strong></p>
-            <ul class="list-disc pl-4 space-y-1">
-              <li>Hardened authentication (MFA support)</li>
-              <li>Data encryption (AES-256)</li>
-              <li>Secure session management</li>
-              <li>Role-based access control</li>
-            </ul>
           </div>
         </details>
 
@@ -278,80 +290,124 @@ ISIM Appliance → DB2 (Identity Backend)
         </a>
       </div>
 
-      <!-- Project 3: ASP.NET MVC + ArcGIS -->
+      <!-- Project 3: IBM Security Verify Privilege (PAM) -->
       <div class="project-card reveal border-emerald-500 border-2">
         <div class="flex justify-between items-start mb-4">
-          <h3 class="text-xl font-bold">ArcGIS Geospatial Solution</h3>
-          <span class="bg-emerald-600 text-white text-[10px] px-2 py-1 rounded">ASP.NET MVC</span>
+          <h3 class="text-xl font-bold">IBM Security Verify Privilege (ISVP) PAM</h3>
+          <span class="bg-emerald-600 text-white text-[10px] px-2 py-1 rounded">PAM Deployment</span>
         </div>
-        <p class="text-slate-600 mb-4 text-sm">GIS integration with ASP.NET MVC for geospatial management solutions. Implemented robust authentication with ASP.NET Identity.</p>
+        <p class="text-slate-600 mb-4 text-sm">Full-scale Privileged Access Management solution using IBM Security Verify Privilege (powered by Delinea) in sandbox environment.</p>
 
         <details class="group border rounded-lg overflow-hidden transition-all duration-300">
           <summary class="flex justify-between items-center p-3 bg-slate-50 cursor-pointer font-bold text-emerald-600 hover:bg-slate-100 text-sm">
-            View Technical Details
+            View Deployment Details
             <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
           </summary>
-          <div class="p-4 bg-white space-y-3 text-xs text-slate-700 leading-relaxed border-t">
-            <p><strong>🛠️ Tech Stack:</strong></p>
+          <div class="p-4 bg-white space-y-4 text-xs text-slate-700 leading-relaxed border-t">
+            <p><strong>📅 Timeline:</strong> May 2026 – Present | <strong>🏢 Associated:</strong> Software Productivity Strategists, Inc. (SPS)</p>
+            
+            <p><strong>🎯 Core Components Deployed:</strong></p>
             <ul class="list-disc pl-4 space-y-1">
-              <li>Framework: ASP.NET MVC 5</li>
-              <li>GIS: ArcGIS API for JavaScript</li>
-              <li>Database: SQL Server</li>
-              <li>Auth: ASP.NET Identity</li>
+              <li>IBM Security Verify Privilege Vault</li>
+              <li>IBM Security Verify Privilege Manager</li>
             </ul>
-            <p class="mt-2"><strong>🌍 Features:</strong></p>
+            
+            <p><strong>🔧 Tools & Environment:</strong></p>
+            <div class="bg-slate-100 p-2 rounded space-y-1">
+              <div><strong>Hypervisor:</strong> VMware Workstation Pro</div>
+              <div><strong>OS:</strong> Windows Server 2022</div>
+              <div><strong>Database:</strong> SQL Server 2022 Express</div>
+              <div><strong>Web Server:</strong> Internet Information Services (IIS)</div>
+            </div>
+            
+            <p><strong>⚙️ Technical Execution:</strong></p>
             <ul class="list-disc pl-4 space-y-1">
-              <li>Interactive map visualization</li>
-              <li>Geospatial data management</li>
-              <li>Layer-based rendering</li>
-              <li>Secure user authentication & roles</li>
+              <li>Built Windows Server environment from scratch with static configurations for stable domain pathways</li>
+              <li>Configured and hardened IIS web application layer to host primary PAM interfaces securely</li>
+              <li>Resolved critical SQL Server installation blockers, troubleshooting database connectivity and fixing collation settings</li>
+              <li>Validated end-to-end communication across key network ports for seamless authentication and vault reliability</li>
             </ul>
+            
+            <p><strong>🔄 Current Status:</strong> Integration with Active Directory in-progress</p>
           </div>
         </details>
       </div>
 
-    </div>
-  </div>
-</section>
+      <!-- Project 4: ISAM/ISVA Deployment & Integration -->
+      <div class="project-card reveal border-cyan-500 border-2 lg:col-span-2">
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="text-2xl font-bold">IBM ISAM/ISVA Deployment & ISIM+AD Integration</h3>
+          <span class="bg-cyan-600 text-white text-[10px] px-2 py-1 rounded">Access Management</span>
+        </div>
+        <p class="text-slate-600 mb-6">Deployed ISAM appliance with dual-network interfaces for LMI administration and Web Reverse Proxy runtime, integrated with ISIM and Active Directory for policy-based access enforcement.</p>
 
-<!-- Resume Preview (KEPT AS-IS) -->
-<section id="resume-view" class="py-20 bg-slate-50">
-  <div class="container mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-12 underline decoration-blue-500 decoration-4 underline-offset-8">Resume Preview</h2>
-    <div class="max-w-5xl mx-auto bg-white p-4 shadow-2xl rounded-xl border border-slate-200">
-      <iframe src="resume.pdf" class="w-full h-[600px] md:h-[800px] border-none rounded-lg" title="Resume Preview"></iframe>
-    </div>
-  </div>
-</section>
+        <details class="group border rounded-lg overflow-hidden transition-all duration-300">
+          <summary class="flex justify-between items-center p-4 bg-slate-50 cursor-pointer font-bold text-cyan-600 hover:bg-slate-100">
+            View Full Deployment Blueprint (5 Phases + Integration)
+            <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <div class="p-6 bg-white space-y-5 text-sm text-slate-700 leading-relaxed border-t">
+            
+            <p><strong>🏠 Home Lab IP & Subnet Architecture:</strong></p>
+            <div class="bg-slate-100 p-3 rounded text-xs overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="border-b">
+                    <th class="pb-2">Component / Interface</th>
+                    <th class="pb-2">IP Address</th>
+                    <th class="pb-2">Target Function</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b">
+                    <td class="py-2">ISAM Management (eth0)</td>
+                    <td class="py-2">192.168.10.220</td>
+                    <td class="py-2">LMI dashboard & SSH console</td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="py-2">ISAM Runtime/WRP (eth1)</td>
+                    <td class="py-2">192.168.10.221</td>
+                    <td class="py-2">Web Reverse Proxy junctions</td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="py-2">ISIM Range</td>
+                    <td class="py-2">192.168.10.200-202</td>
+                    <td class="py-2">Identity lifecycle management</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2">Windows Server (ISDS/SDI)</td>
+                    <td class="py-2">192.168.10.210</td>
+                    <td class="py-2">User registry (LDAP) for ISAM auth</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="mt-2"><strong>Network:</strong> 255.255.255.0 | <strong>Gateway:</strong> 192.168.10.1 | <strong>DNS:</strong> 192.168.10.205</p>
+            </div>
 
-<!-- Contact Section (KEPT AS-IS) -->
-<section id="contact" class="py-20 bg-slate-900 text-white">
-  <div class="container mx-auto px-6 text-center reveal">
-    <h2 class="text-3xl font-bold mb-8">Contact Details</h2>
-    <div class="max-w-3xl mx-auto grid md:grid-cols-3 gap-8 text-center">
-      <div class="p-6">
-        <i class="fas fa-phone text-blue-500 text-3xl mb-4"></i>
-        <p class="font-bold">+92 318 5125797</p>
-      </div>
-      <div class="p-6">
-        <i class="fas fa-envelope-open text-blue-500 text-3xl mb-4"></i>
-        <p class="text-sm font-semibold mb-1 text-slate-400 font-bold">Personal:</p>
-        <a href="mailto:huzaifaarifawan@gmail.com" class="hover:text-blue-400 block break-words">huzaifaarifawan@gmail.com</a>
-      </div>
-      <div class="p-6">
-        <i class="fas fa-briefcase text-blue-500 text-3xl mb-4"></i>
-        <p class="text-sm font-semibold mb-1 text-slate-400 font-bold">Professional:</p>
-        <a href="mailto:muhammad.huzaifa@spsnet.com" class="hover:text-blue-400 block break-words">muhammad.huzaifa@spsnet.com</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer (KEPT AS-IS) -->
-<footer class="py-8 bg-slate-950 text-center text-slate-500 text-sm">
-  <p>&copy; 2026 Muhammad Huzaifa Bin Arif. All Rights Reserved.</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+            <p><strong>🚀 Phase-by-Phase Deployment Blueprint:</strong></p>
+            <ol class="list-decimal pl-5 space-y-3">
+              <li>
+                <p><strong>Phase 1: Deploy OVA Template (Hypervisor Setup)</strong></p>
+                <p class="ml-4 text-xs">Deploy ISAM/ISVA OVA file in VMware Workstation/ESXi. Provision 2 network adapters: Adapter 1 → Lab port group/vSwitch (bridged to 192.168.10.x), Adapter 2 → Same network for application routing. Power on VM.</p>
+              </li>
+              <li>
+                <p><strong>Phase 2: Initial Boot & Hardware CLI Setup (Console Access)</strong></p>
+                <p class="ml-4 text-xs">Open VM console, log in (admin/admin), read license agreement, change admin password. Enter CLI configuration wizard.</p>
+              </li>
+              <li>
+                <p><strong>Phase 3: Assign Management IP Baseline (LMI Networking)</strong></p>
+                <p class="ml-4 text-xs">Configure management interface (management1/eth0):</p>
+                <ul class="list-disc ml-6 text-xs space-y-1">
+                  <li>IP Type: Static</li>
+                  <li>IP Address: 192.168.10.220</li>
+                  <li>Subnet Mask: 255.255.255.0</li>
+                  <li>Gateway: 192.168.10.1</li>
+                </ul>
+                <p class="ml-4 text-xs mt-1">Press Ctrl+C to save → LMI engine restarts.</p>
+              </li>
+              <li>
+                <p><strong>Phase 4: Run Setup Wizard via Web LMI (Browser Wizard)</strong></p>
+                <p class="ml-4 text-xs">Navigate to <code class="bg-slate-200 px-1">https://192.168.10.220:443</code>, log in with new credentials. Initial Setup Wizard starts automatically:</p>
+                <ul class="list-disc ml-6 text-xs space-y-1">
+                  <li>Define hostname: <code class="bg-slate-200 px-1">isam-lab.local</code></li>
+                  <li>DNS: 192.168.10.205 | Alternate DNS: 8.
