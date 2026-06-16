@@ -199,3 +199,90 @@ body { font-family: 'Inter', -apple-system, sans-serif; background: var(--body-b
   .resume-pdf { height: 480px; }
   .footer-content { flex-direction: column; text-align: center; }
 }
+
+/* --- Modern Expandable Project Accordion Extensions --- */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  width: 100%;
+  cursor: pointer; /* Makes the entire header block clickable */
+}
+
+.project-title-wrapper {
+  flex: 1;
+}
+
+.header-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+/* Elegant Animated Dropdown Arrow Button */
+.accordion-toggle {
+  background: #f1f5f9;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-bg);
+  font-size: 0.85rem;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.project-card:hover .accordion-toggle {
+  background: var(--primary);
+  color: white;
+}
+
+/* Dynamic State Transformation: Rotate Arrow 180 Degrees */
+.project-card.is-expanded .accordion-toggle {
+  transform: rotate(180deg);
+  background: var(--dark-bg);
+  color: white;
+}
+
+/* Pure Hardware-Accelerated Dynamic Drawer Animations */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: max-height;
+}
+
+/* Expanded Height Container State */
+.project-card.is-expanded .accordion-content {
+  max-height: 1200px; /* High safety ceiling allows text layers to map freely */
+}
+
+.accordion-inner {
+  padding-top: 1.25rem;
+  border-top: 1px dashed #e2e8f0;
+  margin-top: 0.5rem;
+}
+
+/* Adjust project description inside the accordion header alignment layout rules */
+.project-card .project-desc {
+  margin-bottom: 0; 
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 576px) {
+  .project-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .header-actions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
