@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     revealObserver.observe(el);
   });
 
-  // --- Dynamic Scroll Monitor Logic (Scroll Spy & Navbar Scrolled Class) ---
+  // --- Dynamic Scroll Monitor Logic ---
   const handleScrollOperations = () => {
     const scrollPosition = window.scrollY;
     nav.classList.toggle('scrolled', scrollPosition > 50);
@@ -85,17 +85,26 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Interactive Project Accordion Engine ---
   document.querySelectorAll('.project-card').forEach(card => {
     const header = card.querySelector('.project-header');
-    
     if (header) {
       header.addEventListener('click', () => {
         const isExpanded = card.classList.contains('is-expanded');
-        
         document.querySelectorAll('.project-card').forEach(otherCard => {
-          if (otherCard !== card) {
-            otherCard.classList.remove('is-expanded');
-          }
+          otherCard.classList.remove('is-expanded');
         });
-        
+        card.classList.toggle('is-expanded', !isExpanded);
+      });
+    }
+  });
+
+  // --- Interactive Experience Accordion Engine ---
+  document.querySelectorAll('.experience-card').forEach(card => {
+    const header = card.querySelector('.experience-header');
+    if (header) {
+      header.addEventListener('click', () => {
+        const isExpanded = card.classList.contains('is-expanded');
+        document.querySelectorAll('.experience-card').forEach(otherCard => {
+          otherCard.classList.remove('is-expanded');
+        });
         card.classList.toggle('is-expanded', !isExpanded);
       });
     }
@@ -105,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggleBtn = document.getElementById('themeToggleBtn');
   const currentTheme = localStorage.getItem('theme') || 'dark';
 
+  // Apply default state allocation structural markers on body boot
   document.documentElement.setAttribute('data-theme', currentTheme);
   if (currentTheme === 'light' && themeToggleBtn) {
     themeToggleBtn.querySelector('i').className = 'fas fa-sun';
