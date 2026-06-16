@@ -88,4 +88,26 @@ document.addEventListener('DOMContentLoaded', () => {
   // Bind and initiate active scroll listening pipelines
   window.addEventListener('scroll', handleScrollOperations, { passive: true });
   handleScrollOperations(); // Run once initialization map properties render
+
+  // --- Interactive Project Accordion Engine ---
+  document.querySelectorAll('.project-card').forEach(card => {
+    const header = card.querySelector('.project-header');
+    
+    if (header) {
+      header.addEventListener('click', () => {
+        const isExpanded = card.classList.contains('is-expanded');
+        
+        // Auto-close any other open project card to preserve clean layout spaces
+        document.querySelectorAll('.project-card').forEach(otherCard => {
+          if (otherCard !== card) {
+            otherCard.classList.remove('is-expanded');
+          }
+        });
+        
+        // Toggle current card selection state loop
+        card.classList.toggle('is-expanded', !isExpanded);
+      });
+    }
+  });
+
 });
