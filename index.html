@@ -152,104 +152,139 @@
 
 <section id="projects" class="section projects">
   <div class="container">
-    <h2 class="heading-xxl section-title reveal">Projects & Deployments</h2>
+    <h2 class="heading-xxl section-title reveal">Featured Engineering Case Studies</h2>
     <div class="project-grid">
 
       <div class="project-card project-blue large reveal">
         <div class="project-header">
-          <h3 class="project-title">IBM's ISIM & Active Directory Full Deployment</h3>
-          <span class="badge badge-blue">Identity Governance</span>
-        </div>
-        <p class="project-desc">Complete end-to-end sandbox and production blueprinting of IBM Security Identity Manager infrastructure mapping automated lifecycle transitions.</p>
-        <div class="card-content">
-          <h4 class="subsection-title"><i class="fas fa-cogs"></i> Infrastructure Topography:</h4>
-          <div class="info-grid">
-            <div><strong>Hypervisor:</strong> VMware Workstation Pro</div>
-            <div><strong>Identity Core:</strong> IBM Verify Governance v10.0 Stream</div>
-            <div><strong>Database Layer:</strong> IBM DB2 Enterprise (Configured Schemas)</div>
-            <div><strong>Directory Server:</strong> IBM SDS v6.4 (Configured Tree Base)</div>
-            <div><strong>Middleware Engine:</strong> IBM SDI v7.2 + Remote Method Invocation (RMI)</div>
-            <div><strong>External Target:</strong> Active Directory (Windows Server 2016/2022)</div>
+          <div class="project-title-wrapper">
+            <h3 class="project-title">IBM ISIM & Active Directory Full Deployment</h3>
+            <p class="project-desc">Complete end-to-end sandbox and production blueprinting of IBM Security Identity Manager infrastructure.</p>
           </div>
-          <h4 class="subsection-title"><i class="fas fa-project-diagram"></i> Core Technical Implementation Phases:</h4>
-          <ol class="phase-list">
-            <li><strong>Virtual Networking:</strong> Built dedicated VMware machines isolating communication pathways with static IPs.</li>
-            <li><strong>Data Instance Preparation:</strong> Deployed DB2 database parameters and integrated with ISIM later on.</li>
-            <li><strong>LDAP Suffix Mapping:</strong> Formed custom structural directories inside SDS v6.4 to process account objects cleanly.</li>
-            <li><strong>Synchronization Bridges:</strong> Mounted SDI v7.2 engines, mapped transport handshakes, and deployed target Active Directory agents.</li>
-            <li><strong>Maintenance Engineering:</strong> Managed system updates utilizing specific ISIM v10.0.0.4 application patches.</li>
-          </ol>
-          <div class="status-badge">
-            <span class="status-verified"><i class="fas fa-check-circle"></i> Production Integration Validated: ISIM, DB2, LDAP, SDI , and Dispatcher</span>
+          <div class="header-actions">
+            <span class="badge badge-blue">Identity Governance</span>
+            <button class="accordion-toggle" aria-label="Toggle Details"><i class="fas fa-chevron-down"></i></button>
+          </div>
+        </div>
+        
+        <div class="accordion-content">
+          <div class="accordion-inner">
+            <h4 class="subsection-title"><i class="fas fa-cogs"></i> Infrastructure Topography:</h4>
+            <div class="info-grid">
+              <div><strong>Hypervisor:</strong> VMware vSphere / ESXi Cluster</div>
+              <div><strong>Identity Core:</strong> IBM Verify Governance v10.0 Stream</div>
+              <div><strong>Database Layer:</strong> IBM DB2 Enterprise (Configured Schemas)</div>
+              <div><strong>Directory Server:</strong> IBM SDS v6.4 (Configured Tree Base)</div>
+              <div><strong>Middleware Engine:</strong> IBM SDI v7.2 + Remote Method Invocation (RMI)</div>
+              <div><strong>External Target:</strong> Active Directory (Windows Server 2016/2022)</div>
+            </div>
+            <h4 class="subsection-title"><i class="fas fa-project-diagram"></i> Core Technical Implementation Phases:</h4>
+            <ol class="phase-list">
+              <li><strong>Virtual Networking:</strong> Built dedicated VMware machines isolating communication pathways with static IPs.</li>
+              <li><strong>Data Instance Preparation:</strong> Deployed DB2 database parameters, applied tablespace allocations, and populated the base IAM core schema.</li>
+              <li><strong>LDAP Suffix Mapping:</strong> Formed custom structural directories inside SDS v6.4 to process account objects cleanly.</li>
+              <li><strong>Engine Bootstrapping:</strong> Managed initial application cluster setups, adjusted underlying JVM properties, and mapped workflow boundaries.</li>
+              <li><strong>Synchronization Bridges:</strong> Mounted SDI v7.2 engines, mapped transport handshakes, and deployed target Active Directory agents.</li>
+              <li><strong>Automated Business Logic:</strong> Engineered processing controls managing corporate Joiner, Mover, and Leaver events automatically.</li>
+              <li><strong>Maintenance Engineering:</strong> Managed system updates utilizing specific ISIM v10.0.0.4 application patches.</li>
+            </ol>
+            <div class="status-badge">
+              <span class="status-verified"><i class="fas fa-check-circle"></i> Production Integration Validated: ISIM, DB2, LDAP, SDI Engine Loops</span>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="project-card project-purple reveal">
         <div class="project-header">
-          <h3 class="project-title">Cypulse - Security Platform</h3>
-          <span class="badge badge-purple">MERN </span>
+          <div class="project-title-wrapper">
+            <h3 class="project-title">Cypulse - Security Platform</h3>
+            <p class="project-desc">A responsive cybersecurity metrics dashboard coupled to a unified mobile tracking interface.</p>
+          </div>
+          <div class="header-actions">
+            <span class="badge badge-purple">MERN & Mobile Stack</span>
+            <button class="accordion-toggle" aria-label="Toggle Details"><i class="fas fa-chevron-down"></i></button>
+          </div>
         </div>
-        <p class="project-desc">A responsive cybersecurity metrics dashboard coupled to a unified mobile tracking interface.</p>
-        <div class="card-content">
-          <h4 class="subsection-title"><i class="fas fa-laptop"></i> Framework Stack:</h4>
-          <ul class="tech-list">
-            <li>React.js + Tailwind CSS UI Engines</li>
-            <li>Node.js & Express API Web Layer</li>
-            <li>MongoDB Document Storage Clustered Models</li>
-            <li>Ionic React Cross-Platform Mobile Deployment</li>
-          </ul>
+
+        <div class="accordion-content">
+          <div class="accordion-inner">
+            <h4 class="subsection-title"><i class="fas fa-laptop"></i> Framework Stack:</h4>
+            <ul class="tech-list">
+              <li>React.js + Tailwind CSS UI Engines</li>
+              <li>Node.js & Express API Web Layer</li>
+              <li>MongoDB Document Storage Clustered Models</li>
+              <li>Ionic React Cross-Platform Mobile Deployment</li>
+            </ul>
+            <a href="https://huzaifaarifawan.github.io/cypulse-frontend/" target="_blank" class="project-link btn btn-purple" style="margin-top: 1rem;">Explore Platform <i class="fas fa-external-link-alt"></i></a>
+          </div>
         </div>
-        <a href="https://huzaifaarifawan.github.io/cypulse-frontend/" target="_blank" class="project-link btn btn-purple">Explore Platform <i class="fas fa-external-link-alt"></i></a>
       </div>
 
       <div class="project-card project-emerald reveal">
         <div class="project-header">
-          <h3 class="project-title">IBM Verify Privilege (ISVP) PAM Architecture</h3>
-          <span class="badge badge-emerald">Privileged Access</span>
-        </div>
-        <p class="project-desc">Full deployment of enterprise-grade Privileged Access Management structures built to track, vault, and dynamically rotate high-impact corporate infrastructure credentials.</p>
-        <div class="card-content">
-          <h4 class="subsection-title"><i class="fas fa-tools"></i> Platform Specifications:</h4>
-          <div class="info-grid">
-            <div><strong>OS Base:</strong> Windows Server 2022</div>
-            <div><strong>Storage:</strong> MS SQL Server 2022</div>
-            <div><strong>Web Engine:</strong> Hardened IIS 10</div>
-            <div><strong>Core:</strong> ISVP Vault Engine</div>
+          <div class="project-title-wrapper">
+            <h3 class="project-title">IBM Verify Privilege (ISVP) PAM Architecture</h3>
+            <p class="project-desc">Full deployment of enterprise-grade Privileged Access Management structures built to track corporate credentials.</p>
           </div>
-          <h4 class="subsection-title"><i class="fas fa-shield-alt"></i> Engineering Milestones:</h4>
-          <ul class="feature-list">
-            <li><strong>Web Layer Defense:</strong> Enabled customized IIS web server endpoints utilizing explicit TLS configurations and certificate binds.</li>
-            <li><strong>Conflict Engineering:</strong> Patched structural collation and timeout conflicts during initial SQL Server installations.</li>
-            <li><strong>Transport Security:</strong> Monitored port allocations to guarantee secure token processing paths.</li>
-          </ul>
-          <div class="status-badge"><span class="status-verified"><i class="fas fa-check-circle"></i> Vault Node Operations Verified</span></div>
+          <div class="header-actions">
+            <span class="badge badge-emerald">Privileged Access</span>
+            <button class="accordion-toggle" aria-label="Toggle Details"><i class="fas fa-chevron-down"></i></button>
+          </div>
+        </div>
+
+        <div class="accordion-content">
+          <div class="accordion-inner">
+            <h4 class="subsection-title"><i class="fas fa-tools"></i> Platform Specifications:</h4>
+            <div class="info-grid">
+              <div><strong>OS Base:</strong> Windows Server 2022</div>
+              <div><strong>Storage:</strong> MS SQL Server 2022</div>
+              <div><strong>Web Engine:</strong> Hardened IIS 10</div>
+              <div><strong>Core:</strong> ISVP Vault Engine</div>
+            </div>
+            <h4 class="subsection-title"><i class="fas fa-shield-alt"></i> Engineering Milestones:</h4>
+            <ul class="feature-list">
+              <li><strong>Server Hardening:</strong> Configured vanilla operating images with isolated static network route tables.</li>
+              <li><strong>Web Layer Defense:</strong> Enabled customized IIS web server endpoints utilizing explicit TLS configurations and certificate binds.</li>
+              <li><strong>Conflict Engineering:</strong> Patched structural collation and timeout conflicts during initial SQL Server installations.</li>
+              <li><strong>Transport Security:</strong> Monitored port allocations to guarantee secure token processing paths.</li>
+            </ul>
+            <div class="status-badge"><span class="status-verified"><i class="fas fa-check-circle"></i> Vault Node Operations Verified</span></div>
+          </div>
         </div>
       </div>
 
       <div class="project-card project-cyan large reveal">
         <div class="project-header">
-          <h3 class="project-title">ISAM/ISVA Upgrade & Identity Integration</h3>
-          <span class="badge badge-cyan">Access Management</span>
-        </div>
-        <p class="project-desc">Deployed IBM Security Access Manager, that manages access across an organization.</p>
-        <div class="card-content">
-          <h4 class="subsection-title"><i class="fas fa-network-wired"></i> Network Routing Topology:</h4>
-          <div class="info-table">
-            <div class="info-row"><strong>eth0 (LMI Management Segment):</strong> Dedicated to dashboard tools and console configuration.</div>
-            <div class="info-row"><strong>eth1 (WRP Traffic Processing Runtime):</strong> Exposed reverse proxy processing incoming directory requests.</div>
-            <div class="info-row"><strong>Directory Integrations:</strong> Active Directory engines running secure TLS connections over explicit ports (389 / 636).</div>
+          <div class="project-title-wrapper">
+            <h3 class="project-title">ISAM/ISVA Upgrade & Identity Integration</h3>
+            <p class="project-desc">Architected dual-NIC secure runtime environments via IBM Security Access Manager, upgraded to modern IVIA infrastructure.</p>
           </div>
-          <h4 class="subsection-title"><i class="fas fa-terminal"></i> Technical Execution Journey:</h4>
-          <ol class="phase-list">
-            <li><strong>Pattern Deployments:</strong> Provisioned explicit multi-homed appliance images directly across active hypervisors.</li>
-            <li><strong>Console Initializations:</strong> Handled clean command-line configurations and updated administrative system control profiles.</li>
-            <li><strong>Proxy Engineering:</strong> Structured responsive Reverse Proxies, established routing properties, and coded strict access rules.</li>
-            <li><strong>Ecosystem Bridge:</strong> Wired mutual authentication certificates back into core ISIM processing layers to create dynamic policy loops.</li>
-            <li><strong>IVIA Enterprise Migration:</strong> Supervised structural updates transitioning core systems from ISAM v10.0.8 up to modern IBM Verify Identity Access (IVIA v11.0.2), handling safe schema modifications.</li>
-          </ol>
-          <div class="status-badge">
-            <span class="status-verified"><i class="fas fa-check-circle"></i> Migration Verified: WRP Proxies, Active SSO Junctions, IVIA Core Engines</span>
+          <div class="header-actions">
+            <span class="badge badge-cyan">Access Management</span>
+            <button class="accordion-toggle" aria-label="Toggle Details"><i class="fas fa-chevron-down"></i></button>
+          </div>
+        </div>
+
+        <div class="accordion-content">
+          <div class="accordion-inner">
+            <h4 class="subsection-title"><i class="fas fa-network-wired"></i> Network Routing Topology:</h4>
+            <div class="info-table">
+              <div class="info-row"><strong>eth0 (LMI Management Segment):</strong> Dedicated to dashboard tools and console configuration.</div>
+              <div class="info-row"><strong>eth1 (WRP Traffic Processing Runtime):</strong> Exposed reverse proxy processing incoming directory requests.</div>
+              <div class="info-row"><strong>Directory Integrations:</strong> Active Directory engines running secure TLS connections over explicit ports (389 / 636).</div>
+            </div>
+            <h4 class="subsection-title"><i class="fas fa-terminal"></i> Technical Execution Journey:</h4>
+            <ol class="phase-list">
+              <li><strong>Pattern Deployments:</strong> Provisioned explicit multi-homed appliance images directly across active hypervisors.</li>
+              <li><strong>Console Initializations:</strong> Handled clean command-line configurations and updated administrative system control profiles.</li>
+              <li><strong>Proxy Engineering:</strong> Structured responsive Reverse Proxies, established routing properties, and coded strict access rules.</li>
+              <li><strong>Ecosystem Bridge:</strong> Wired mutual authentication certificates back into core ISIM processing layers to create dynamic policy loops.</li>
+              <li><strong>IVIA Enterprise Migration:</strong> Supervised structural updates transitioning core systems from ISAM v10.0.8 up to modern IBM Verify Identity Access (IVIA v11.0.2), handling safe schema modifications.</li>
+            </ol>
+            <div class="status-badge">
+              <span class="status-verified"><i class="fas fa-check-circle"></i> Migration Verified: WRP Proxies, Active SSO Junctions, IVIA Core Engines</span>
+            </div>
           </div>
         </div>
       </div>
