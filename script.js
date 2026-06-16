@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
       mobileMenu.classList.toggle('active');
       
-      // Toggle button visual effect between hamburger and cross icon
       const icon = mobileMenuBtn.querySelector('i');
       if (mobileMenu.classList.contains('active')) {
         icon.className = 'fas fa-times';
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Dismiss active drawer state upon mapping choice
     document.querySelectorAll('.mobile-link').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
@@ -30,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Close menu if user clicks outside the navigation container
     document.addEventListener('click', (e) => {
       if (!nav.contains(e.target) && mobileMenu.classList.contains('active')) {
         mobileMenu.classList.remove('active');
@@ -49,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // Stop tracking once rendered
+        observer.unobserve(entry.target);
       }
     });
   }, revealOptions);
@@ -61,11 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Dynamic Scroll Monitor Logic (Scroll Spy & Navbar Scrolled Class) ---
   const handleScrollOperations = () => {
     const scrollPosition = window.scrollY;
-
-    // Apply tracking background state modifiers to navbar container
     nav.classList.toggle('scrolled', scrollPosition > 50);
 
-    // Scroll Spy: Dynamic tracking highlighting visual anchors
     let insideSectionId = 'home';
     
     sections.forEach(section => {
@@ -85,9 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // Bind and initiate active scroll listening pipelines
   window.addEventListener('scroll', handleScrollOperations, { passive: true });
-  handleScrollOperations(); // Run once initialization map properties render
+  handleScrollOperations();
 
   // --- Interactive Project Accordion Engine ---
   document.querySelectorAll('.project-card').forEach(card => {
@@ -97,17 +90,79 @@ document.addEventListener('DOMContentLoaded', () => {
       header.addEventListener('click', () => {
         const isExpanded = card.classList.contains('is-expanded');
         
-        // Auto-close any other open project card to preserve clean layout spaces
         document.querySelectorAll('.project-card').forEach(otherCard => {
           if (otherCard !== card) {
             otherCard.classList.remove('is-expanded');
           }
         });
         
-        // Toggle current card selection state loop
         card.classList.toggle('is-expanded', !isExpanded);
       });
     }
+  });
+
+  // --- Theme Architecture Switcher Pipeline ---
+  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  if (currentTheme === 'light' && themeToggleBtn) {
+    themeToggleBtn.querySelector('i').className = 'fas fa-sun';
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      let theme = document.documentElement.getAttribute('data-theme');
+      const icon = themeToggleBtn.querySelector('i');
+      
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        icon.className = 'fas fa-sun';
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        icon.className = 'fas fa-moon';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  }
+
+  // --- Real-time Card Light Gradient Coordinate Mapping ---
+  const handleCardGlowMovement = (e) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    card.style.setProperty('--mouse-x', `${x}px`);
+    card.style.setProperty('--mouse-y', `${y}px`);
+  };
+
+  document.querySelectorAll('.experience-card, .project-card').forEach(card => {
+    card.addEventListener('mousemove', handleCardGlowMovement);
+  });
+
+  // --- Secure Clipboard Copy Execution Pipeline ---
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const targetText = btn.getAttribute('data-copy');
+      
+      navigator.clipboard.writeText(targetText).then(() => {
+        btn.classList.add('copied');
+        const icon = btn.querySelector('i');
+        icon.className = 'fas fa-check';
+        icon.style.color = '#10b981';
+        
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          icon.className = 'far fa-copy';
+          icon.style.color = '';
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy text data: ', err);
+      });
+    });
   });
 
 });
