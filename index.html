@@ -20,7 +20,12 @@
       <a href="#resume-view" class="nav-link">Resume</a>
       <a href="#contact" class="nav-link">Contact</a>
     </div>
-    <button id="mobileMenuBtn" class="mobile-btn" aria-label="Toggle Navigation Menu"><i class="fas fa-bars"></i></button>
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <button id="themeToggleBtn" class="theme-btn" aria-label="Toggle Theme System">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button id="mobileMenuBtn" class="mobile-btn" aria-label="Toggle Navigation Menu"><i class="fas fa-bars"></i></button>
+    </div>
   </div>
   <div id="mobileMenu" class="mobile-menu">
     <a href="#home" class="mobile-link">Home</a>
@@ -90,13 +95,12 @@
             <li><strong>Framework Engineering:</strong> Built scalable systems using the MERN Stack and ASP.NET MVC architectures.</li>
             <li><strong>Spatial Implementations:</strong> Designed and embedded custom map and geographic layout components utilizing ArcGIS integrations.</li>
             <li><strong>Identity Controls:</strong> Locked down local systems using standard ASP.NET Identity authentication frameworks.</li>
-            
           </ul>
           <h4 class="subsection-title highlight"><i class="fas fa-briefcase"></i> Innovista IT Management:</h4>
           <ul class="feature-list">
             <li>Directed technical infrastructure operations and team resource allocation for the VistaMart.biz platform.</li>
             <li>Optimized application execution paths to maintain high uptime and speed metrics.</li>
-            <li> Shipped Cypulse, cross-platform app leveraging Ionic React for real-time security tracking.</li>
+            <li>Shipped Cypulse, cross-platform app leveraging Ionic React for real-time security tracking.</li>
           </ul>
         </div>
       </div>
@@ -276,7 +280,7 @@
             </div>
             <h4 class="subsection-title"><i class="fas fa-terminal"></i> Technical Execution Journey:</h4>
             <ol class="phase-list">
-              <li><strong>Pattern Deployments:</strong> Provisioned explicit multi-homed appliance images directly across active hypervisors.</li>
+              <li>"><strong>Pattern Deployments:</strong> Provisioned explicit multi-homed appliance images directly across active hypervisors.</li>
               <li><strong>Console Initializations:</strong> Handled clean command-line configurations and updated administrative system control profiles.</li>
               <li><strong>Proxy Engineering:</strong> Structured responsive Reverse Proxies, established routing properties, and coded strict access rules.</li>
               <li><strong>Ecosystem Bridge:</strong> Wired mutual authentication certificates back into core ISIM processing layers to create dynamic policy loops.</li>
@@ -296,6 +300,10 @@
 <section id="resume-view" class="section resume">
   <div class="container">
     <h2 class="heading-xxl section-title reveal">Resume Preview</h2>
+    <div class="mobile-resume-action">
+      <p><i class="fas fa-mobile-alt"></i> Viewing on mobile? For the best experience, open the document directly:</p>
+      <a href="resume.pdf" target="_blank" class="btn btn-secondary"><i class="fas fa-external-link-alt"></i> Open Fullscreen Resume</a>
+    </div>
     <div class="resume-wrapper reveal">
       <iframe src="resume.pdf" class="resume-pdf" title="Curriculum Vitae Preview"></iframe>
     </div>
@@ -314,12 +322,18 @@
       <div class="contact-item reveal">
         <i class="fas fa-envelope contact-icon"></i>
         <p class="contact-label">Personal Identity Mail</p>
-        <a href="mailto:huzaifaarifawan@gmail.com" class="contact-value-link">huzaifaarifawan@gmail.com</a>
+        <div class="copy-wrapper">
+          <a href="mailto:huzaifaarifawan@gmail.com" class="contact-value-link">huzaifaarifawan@gmail.com</a>
+          <button class="copy-btn" data-copy="huzaifaarifawan@gmail.com" aria-label="Copy Email"><i class="far fa-copy"></i></button>
+        </div>
       </div>
       <div class="contact-item reveal">
         <i class="fas fa-briefcase contact-icon"></i>
         <p class="contact-label">Corporate Secure Mail</p>
-        <a href="mailto:muhammad.huzaifa@spsnet.com" class="contact-value-link">muhammad.huzaifa@spsnet.com</a>
+        <div class="copy-wrapper">
+          <a href="mailto:muhammad.huzaifa@spsnet.com" class="contact-value-link">muhammad.huzaifa@spsnet.com</a>
+          <button class="copy-btn" data-copy="muhammad.huzaifa@spsnet.com" aria-label="Copy Corporate Email"><i class="far fa-copy"></i></button>
+        </div>
       </div>
     </div>
   </div>
