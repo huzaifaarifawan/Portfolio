@@ -172,8 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Parallax Tilt Calculation Matrix
     if (window.innerWidth > 768) {
-      const tiltX = (y - rect.height / 2) / (rect.height / 2) * -6; 
-      const tiltY = (x - rect.width / 2) / (rect.width / 2) * 6; 
+      const tiltX = (y - rect.height / 2) / (rect.height / 2) * -4; 
+      const tiltY = (x - rect.width / 2) / (rect.width / 2) * 4; 
       card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-6px) scale(1.01)`;
     }
   };
