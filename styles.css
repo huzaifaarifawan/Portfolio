@@ -103,7 +103,6 @@ body, .navbar, .experience-card, .project-card, .cert-card, .btn, i, p, h1, h2, 
 .btn-primary:hover { transform: translateY(-2px); background: #1d4ed8; }
 .btn-secondary { border: 1.5px solid var(--card-border); color: var(--text-dark); background: var(--card-bg); }
 .btn-secondary:hover { background: var(--nested-bg); transform: translateY(-2px); }
-.btn-purple { background: var(--purple); color: white; }
 
 /* Hero Presentation Section */
 .hero { padding: 9.5rem 0 5.5rem; background: radial-gradient(circle at 90% 10%, rgba(37, 99, 235, 0.05), transparent 45%), radial-gradient(circle at 10% 90%, rgba(14, 165, 233, 0.05), transparent 45%); }
@@ -112,7 +111,7 @@ body, .navbar, .experience-card, .project-card, .cert-card, .btn, i, p, h1, h2, 
 .profile-pulse { position: absolute; top: -4px; left: -4px; width: 158px; height: 158px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); z-index: 1; opacity: 0.35; animation: profilePulse 3s infinite cubic-bezier(0.16, 1, 0.3, 1); }
 .description { font-size: 1rem; color: var(--text-muted); text-align: center; max-width: 620px; margin: 0 auto 2.2rem; }
 
-/* Card Element Positioning Glow Mechanics Overlay */
+/* Card Card Glow Overlay */
 .card-glow {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -150,13 +149,10 @@ body, .navbar, .experience-card, .project-card, .cert-card, .btn, i, p, h1, h2, 
 .experience-card.is-expanded .exp-accordion-content { max-height: 1000px; opacity: 1; }
 .card-content { margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px dashed var(--card-border); }
 .subsection-title { font-size: 0.88rem; font-weight: 700; text-transform: uppercase; color: var(--text-dark); margin: 1.5rem 0 0.8rem; display: flex; align-items: center; gap: 0.5rem; }
-.subsection-title.highlight { background: var(--nested-bg); padding: 0.6rem 1rem; border-radius: 0.5rem; border-left: 3px solid var(--purple); }
 
 /* Structural Lists Elements */
 .feature-list li { position: relative; padding-left: 1.4rem; margin-bottom: 0.6rem; color: var(--text-main); font-size: 0.92rem; list-style: none; }
 .feature-list li::before { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; left: 0; color: var(--emerald); font-size: 0.85rem; }
-.tech-list li { position: relative; padding-left: 1.4rem; margin-bottom: 0.5rem; color: var(--text-main); font-size: 0.92rem; list-style: none; }
-.tech-list li::before { content: '•'; position: absolute; left: 0; color: var(--purple); font-weight: bold; padding-left: 0.2rem; }
 .phase-list li { position: relative; padding-left: 1.5rem; margin-bottom: 0.9rem; color: var(--text-main); font-size: 0.92rem; list-style: none; }
 .phase-list li::before { content: '→'; position: absolute; left: 0; color: var(--primary); font-weight: 700; }
 
@@ -166,9 +162,6 @@ body, .navbar, .experience-card, .project-card, .cert-card, .btn, i, p, h1, h2, 
 .info-grid div strong { color: var(--text-dark); }
 .info-table { background: var(--nested-bg); padding: 1rem; border-radius: 0.6rem; border: 1px solid var(--nested-border); margin-bottom: 1.2rem; }
 .info-row { font-size: 0.85rem; color: var(--text-main); padding-bottom: 0.5rem; margin-bottom: 0.5rem; border-bottom: 1px dashed var(--card-border); }
-.info-row strong { color: var(--text-dark); }
-.status-badge { display: flex; align-items: center; gap: 0.5rem; margin-top: 1.4rem; padding: 0.75rem 1rem; background: rgba(16, 185, 129, 0.1); border-radius: 0.5rem; border: 1px solid var(--emerald); width: fit-content; }
-.status-verified { color: var(--emerald); font-weight: 600; font-size: 0.85rem; display: flex; align-items: center; gap: 0.4rem; }
 
 /* Interactive Certifications Grid Module Matrix */
 .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto; perspective: 1000px; }
@@ -205,17 +198,14 @@ body, .navbar, .experience-card, .project-card, .cert-card, .btn, i, p, h1, h2, 
 .cert-link:hover i { transform: translateX(3px); }
 
 /* Engineering Project Matrix Layout */
-.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 1050px; margin: 0 auto; perspective: 1000px; }
+.project-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 2rem; max-width: 900px; margin: 0 auto; perspective: 1000px; }
 .project-card { background: var(--card-bg); padding: 2rem; border-radius: 1rem; box-shadow: var(--card-shadow); border: 1px solid var(--card-border); display: flex; flex-direction: column; height: 100%; position: relative; overflow: hidden; transform-style: preserve-3d; will-change: transform; }
 .project-card:hover { transform: translateY(-6px); box-shadow: var(--card-hover-shadow); border-color: rgba(37, 99, 235, 0.2); }
-.project-blue { border-top: 3px solid var(--primary); }
-.project-purple { border-top: 3px solid var(--purple); }
-.project-emerald { border-top: 3px solid var(--emerald); }
-.project-cyan { border-top: 3px solid var(--cyan); }
-.project-card.large { grid-column: span 2; }
+.project-blue { border-top: 4px solid var(--primary); }
+.project-emerald { border-top: 4px solid var(--emerald); }
+.project-cyan { border-top: 4px solid var(--cyan); }
 .badge { font-size: 0.7rem; font-weight: 700; padding: 0.35rem 0.8rem; border-radius: 2rem; color: white; letter-spacing: 0.02em; text-transform: uppercase; z-index: 2; }
 .badge-blue { background: var(--primary); }
-.badge-purple { background: var(--purple); }
 .badge-emerald { background: var(--emerald); }
 .badge-cyan { background: var(--cyan); }
 .project-desc { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem; z-index: 2; }
@@ -227,9 +217,45 @@ body, .navbar, .experience-card, .project-card, .cert-card, .btn, i, p, h1, h2, 
 .project-card:hover .accordion-toggle { background: var(--primary); color: white; }
 
 .project-card.is-expanded .accordion-toggle { transform: rotate(180deg); background: var(--text-dark); color: var(--card-bg); }
-.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1); will-change: max-height; z-index: 2; position: relative; }
-.project-card.is-expanded .accordion-content { max-height: 1200px; }
+.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.6s cubic-bezier(0.16, 1, 0.3, 1); will-change: max-height; z-index: 2; position: relative; }
+.project-card.is-expanded .accordion-content { max-height: 2000px; }
 .accordion-inner { padding-top: 1.25rem; border-top: 1px dashed var(--card-border); margin-top: 0.5rem; }
+
+/* Pure ASCII Topographic Engine Blocks */
+.ascii-diagram {
+  background: #090d16;
+  color: #38bdf8;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  padding: 1.2rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--nested-border);
+  overflow-x: auto;
+  margin: 1rem 0;
+  white-space: pre;
+}
+[data-theme="light"] .ascii-diagram {
+  background: #f8fafc;
+  color: #0369a1;
+  border-color: #cbd5e1;
+}
+
+/* Programmatic Hybrid Advantage Callouts */
+.hybrid-advantage-note {
+  background: rgba(37, 99, 235, 0.04);
+  border-left: 4px solid var(--primary);
+  padding: 1.25rem;
+  border-radius: 0 0.6rem 0.6rem 0;
+  margin: 1.8rem 0;
+}
+.hybrid-advantage-note h5 { color: var(--text-dark); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+.hybrid-advantage-note p { font-size: 0.88rem; color: var(--text-main); margin: 0; font-style: italic; }
+.advantage-emerald { background: rgba(5, 150, 105, 0.04); border-left-color: var(--emerald); }
+.advantage-cyan { background: rgba(8, 145, 178, 0.04); border-left-color: var(--cyan); }
+
+.status-badge { display: flex; align-items: center; gap: 0.5rem; margin-top: 1.4rem; padding: 0.75rem 1rem; background: rgba(16, 185, 129, 0.1); border-radius: 0.5rem; border: 1px solid var(--emerald); width: fit-content; }
+.status-verified { color: var(--emerald); font-weight: 600; font-size: 0.85rem; display: flex; align-items: center; gap: 0.4rem; }
 
 /* Documents Viewports Components */
 .resume-wrapper { background: var(--card-bg); padding: 0.75rem; border-radius: 1rem; box-shadow: var(--card-shadow); border: 1px solid var(--card-border); max-width: 850px; margin: 0 auto; }
@@ -275,8 +301,6 @@ body, .navbar, .experience-card, .project-card, .cert-card, .btn, i, p, h1, h2, 
 
 /* Layout Breakpoints Adaptors */
 @media (max-width: 968px) {
-  .project-grid { grid-template-columns: 1fr; }
-  .project-card.large { grid-column: span 1; }
   .contact-grid { grid-template-columns: 1fr; gap: 1.2rem; }
 }
 @media (max-width: 768px) {
