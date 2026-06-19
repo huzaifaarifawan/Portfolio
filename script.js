@@ -110,11 +110,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // --- Interactive Certifications Accordion Expansion Engine ---
+  document.querySelectorAll('.cert-card').forEach(card => {
+    const toggleBtn = card.querySelector('.cert-expand-toggle');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isExpanded = card.classList.contains('is-expanded');
+        
+        document.querySelectorAll('.cert-card').forEach(otherCard => {
+          if(otherCard !== card) otherCard.classList.remove('is-expanded');
+        });
+        
+        card.classList.toggle('is-expanded', !isExpanded);
+        
+        const labelText = toggleBtn.childNodes[0];
+        if (card.classList.contains('is-expanded')) {
+          labelText.textContent = "Collapse ";
+        } else {
+          labelText.textContent = "Read More ";
+        }
+      });
+    }
+  });
+
   // --- Theme Architecture Switcher Pipeline ---
   const themeToggleBtn = document.getElementById('themeToggleBtn');
   const currentTheme = localStorage.getItem('theme') || 'dark';
 
-  // Apply default state allocation structural markers on body boot
   document.documentElement.setAttribute('data-theme', currentTheme);
   if (currentTheme === 'light' && themeToggleBtn) {
     themeToggleBtn.querySelector('i').className = 'fas fa-sun';
@@ -137,8 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Real-time Card Light Gradient Coordinate Mapping ---
-  const handleCardGlowMovement = (e) => {
+  // --- Real-time Card Light Gradient Coordinate Mapping & Parallax 3D Tilt Engine ---
+  const handleCardInteraction = (e) => {
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -146,10 +169,24 @@ document.addEventListener('DOMContentLoaded', () => {
     
     card.style.setProperty('--mouse-x', `${x}px`);
     card.style.setProperty('--mouse-y', `${y}px`);
+
+    // Parallax Tilt Calculation Matrix
+    if (window.innerWidth > 768) {
+      const tiltX = (y - rect.height / 2) / (rect.height / 2) * -6; 
+      const tiltY = (x - rect.width / 2) / (rect.width / 2) * 6; 
+      card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-6px) scale(1.01)`;
+    }
   };
 
-  document.querySelectorAll('.experience-card, .project-card').forEach(card => {
-    card.addEventListener('mousemove', handleCardGlowMovement);
+  const resetCardInteraction = (e) => {
+    const card = e.currentTarget;
+    card.style.transform = `rotateX(0deg) rotateY(0deg) translateY(0px) scale(1)`;
+  };
+
+  // Bind interaction engines to all layout structural elements
+  document.querySelectorAll('.experience-card, .project-card, .cert-card').forEach(card => {
+    card.addEventListener('mousemove', handleCardInteraction);
+    card.addEventListener('mouseleave', resetCardInteraction);
   });
 
   // --- Secure Clipboard Copy Execution Pipeline ---
