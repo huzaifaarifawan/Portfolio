@@ -26,7 +26,7 @@
   --cyan: #0891b2;
   --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
   --card-hover-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5);
-  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Light System Alternate Layout Override Mapping */
@@ -54,9 +54,9 @@ body { font-family: 'Inter', -apple-system, sans-serif; background: var(--body-b
 
 /* Global Smooth Rendering Engine */
 body, .navbar, .experience-card, .project-card, .cert-card, .btn, i, p, h1, h2, h3, a, .info-grid, .info-table, .accordion-toggle, .exp-accordion-toggle {
-  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+  transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1),
               color 0.3s ease;
 }
 
@@ -112,15 +112,28 @@ body, .navbar, .experience-card, .project-card, .cert-card, .btn, i, p, h1, h2, 
 .profile-pulse { position: absolute; top: -4px; left: -4px; width: 158px; height: 158px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); z-index: 1; opacity: 0.35; animation: profilePulse 3s infinite cubic-bezier(0.16, 1, 0.3, 1); }
 .description { font-size: 1rem; color: var(--text-muted); text-align: center; max-width: 620px; margin: 0 auto 2.2rem; }
 
+/* Card Element Positioning Glow Mechanics Overlay */
+.card-glow {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(800px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(37, 99, 235, 0.08), transparent 40%);
+  z-index: 1;
+  pointer-events: none;
+}
+[data-theme="light"] .card-glow {
+  background: radial-gradient(600px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(37, 99, 235, 0.04), transparent 40%);
+}
+
 /* Advanced Nested Experience Accordions Layout */
 .experience-grid { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.2rem; position: relative; }
 .experience-grid::before { content: ''; position: absolute; left: 20px; top: 10px; bottom: 10px; width: 2px; background: var(--card-border); }
-.experience-card { background: var(--card-bg); padding: 2rem; border-radius: 1rem; box-shadow: var(--card-shadow); border: 1px solid var(--card-border); position: relative; transition: var(--transition-smooth); }
-.experience-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; cursor: pointer; width: 100%; position: relative; padding-left: 2rem; }
+.experience-card { background: var(--card-bg); padding: 2rem; border-radius: 1rem; box-shadow: var(--card-shadow); border: 1px solid var(--card-border); position: relative; overflow: hidden; transform-style: preserve-3d; will-change: transform; }
+.experience-card:hover { transform: translateY(-4px); box-shadow: var(--card-hover-shadow); border-color: rgba(37, 99, 235, 0.2); }
+.experience-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; cursor: pointer; width: 100%; position: relative; padding-left: 2rem; z-index: 2; }
 .experience-title-wrapper { flex: 1; }
 .card-blue { border-left: 4px solid var(--primary); }
 .card-purple { border-left: 4px solid var(--purple); }
-.card-marker { position: absolute; left: 18px; top: 26px; width: 20px; height: 20px; border-radius: 50%; border: 4px solid var(--card-bg); background: var(--primary); z-index: 2; transition: var(--transition-smooth); }
+.card-marker { position: absolute; left: 18px; top: 26px; width: 20px; height: 20px; border-radius: 50%; border: 4px solid var(--card-bg); background: var(--primary); z-index: 3; transition: var(--transition-smooth); }
 .card-purple .card-marker { background: var(--purple); }
 
 .card-title { font-size: 1.35rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.3rem; }
@@ -129,13 +142,12 @@ body, .navbar, .experience-card, .project-card, .cert-card, .btn, i, p, h1, h2, 
 .card-date { color: var(--text-muted); font-size: 0.85rem; font-weight: 500; margin-bottom: 0.8rem; display: inline-flex; align-items: center; gap: 0.4rem; }
 .experience-card .section-desc { color: var(--text-main); font-size: 0.95rem; margin-bottom: 0; }
 
-/* Experience Haptic Arrow Rotations */
 .exp-accordion-toggle { background: var(--nested-bg); border: none; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-dark); cursor: pointer; }
 .experience-card:hover .exp-accordion-toggle { background: var(--primary); color: white; }
 .experience-card.is-expanded .exp-accordion-toggle { transform: rotate(180deg); background: var(--text-dark); color: var(--card-bg); }
 
-.exp-accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1); will-change: max-height; }
-.experience-card.is-expanded .exp-accordion-content { max-height: 1000px; }
+.exp-accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease; opacity: 0; will-change: max-height; z-index: 2; position: relative; }
+.experience-card.is-expanded .exp-accordion-content { max-height: 1000px; opacity: 1; }
 .card-content { margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px dashed var(--card-border); }
 .subsection-title { font-size: 0.88rem; font-weight: 700; text-transform: uppercase; color: var(--text-dark); margin: 1.5rem 0 0.8rem; display: flex; align-items: center; gap: 0.5rem; }
 .subsection-title.highlight { background: var(--nested-bg); padding: 0.6rem 1rem; border-radius: 0.5rem; border-left: 3px solid var(--purple); }
@@ -158,42 +170,64 @@ body, .navbar, .experience-card, .project-card, .cert-card, .btn, i, p, h1, h2, 
 .status-badge { display: flex; align-items: center; gap: 0.5rem; margin-top: 1.4rem; padding: 0.75rem 1rem; background: rgba(16, 185, 129, 0.1); border-radius: 0.5rem; border: 1px solid var(--emerald); width: fit-content; }
 .status-verified { color: var(--emerald); font-weight: 600; font-size: 0.85rem; display: flex; align-items: center; gap: 0.4rem; }
 
-/* Verification Credentials Sections */
-.cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1050px; margin: 0 auto; }
-.cert-card { background: var(--card-bg); padding: 2rem 1.5rem; border-radius: 1rem; box-shadow: var(--card-shadow); text-align: center; border: 1px solid var(--card-border); display: flex; flex-direction: column; align-items: center; justify-content: space-between; position: relative; }
-.cert-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--card-border); }
-.cert-card.cert-blue::before { background: var(--primary); }
-.cert-card:hover { transform: translateY(-5px); box-shadow: var(--card-hover-shadow); }
-.cert-icon { font-size: 2.2rem; color: var(--primary); margin-bottom: 1.2rem; }
-.cert-title { font-size: 1rem; font-weight: 700; color: var(--text-dark); line-height: 1.4; margin-bottom: 0.5rem; min-height: 2.8rem; display: flex; align-items: center; }
-.cert-id { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; margin-bottom: 1.2rem; }
-.cert-link { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 0.85rem; padding: 0.4rem 0.8rem; border-radius: 0.4rem; background: var(--nested-bg); }
-.cert-link:hover { background: var(--primary); color: white; }
+/* Interactive Certifications Grid Module Matrix */
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto; perspective: 1000px; }
+.cert-card { background: var(--card-bg); padding: 2rem 1.75rem; border-radius: 1.25rem; box-shadow: var(--card-shadow); border: 1px solid var(--card-border); display: flex; flex-direction: column; position: relative; overflow: hidden; transform-style: preserve-3d; will-change: transform, box-shadow; }
+.cert-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: var(--card-hover-shadow); border-color: rgba(37, 99, 235, 0.25); }
+.cert-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--card-border); z-index: 2; }
+.cert-card.cert-blue::before { background: linear-gradient(90deg, var(--primary), var(--secondary)); }
+.cert-header { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 1.25rem; z-index: 2; }
+.cert-icon { font-size: 2rem; color: var(--primary); transform: translateZ(20px); }
+.cert-badge-type { font-size: 0.7rem; font-weight: 700; padding: 0.25rem 0.6rem; border-radius: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.cert-badge-type.premium { background: rgba(37, 99, 235, 0.15); color: var(--secondary); border: 1px solid rgba(37, 99, 235, 0.3); }
+.cert-badge-type.expert { background: rgba(124, 58, 237, 0.15); color: #a78bfa; border: 1px solid rgba(124, 58, 237, 0.3); }
+.cert-badge-type.intermediate { background: rgba(8, 145, 178, 0.15); color: var(--cyan); border: 1px solid rgba(8, 145, 178, 0.3); }
+.cert-badge-type.foundation { background: rgba(71, 85, 105, 0.15); color: var(--text-muted); border: 1px solid var(--card-border); }
+.cert-title { font-size: 1.1rem; font-weight: 700; color: var(--text-dark); line-height: 1.4; margin-bottom: 0.4rem; z-index: 2; transform: translateZ(15px); }
+.cert-id { font-size: 0.8rem; color: var(--primary); font-weight: 600; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.35rem; z-index: 2; }
+.cert-desc-short { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.5rem; z-index: 2; }
 
-/* Engineering Project Matrix */
-.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 1050px; margin: 0 auto; }
-.project-card { background: var(--card-bg); padding: 2rem; border-radius: 1rem; box-shadow: var(--card-shadow); border: 1px solid var(--card-border); display: flex; flex-direction: column; height: 100%; transition: var(--transition-smooth); }
-.project-card:hover { transform: translateY(-6px); box-shadow: var(--card-hover-shadow); }
+/* Certifications Panel Details Accordions Layer */
+.cert-accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease; opacity: 0; will-change: max-height, opacity; z-index: 2; }
+.cert-card.is-expanded .cert-accordion-content { max-height: 200px; opacity: 1; margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px dashed var(--card-border); }
+.cert-desc-full { font-size: 0.85rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.8rem; }
+.cert-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.5rem; }
+.cert-tags span { font-size: 0.72rem; font-weight: 600; background: var(--nested-bg); color: var(--text-muted); padding: 0.15rem 0.5rem; border-radius: 0.35rem; border: 1px solid var(--nested-border); }
+.cert-footer-actions { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 1.25rem; width: 100%; z-index: 2; }
+.cert-expand-toggle { background: none; border: none; color: var(--text-muted); font-size: 0.82rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; transition: color 0.3s ease; }
+.cert-expand-toggle i { font-size: 0.75rem; transition: transform 0.3s ease; }
+.cert-expand-toggle:hover { color: var(--primary); }
+.cert-card.is-expanded .cert-expand-toggle { color: var(--text-dark); }
+.cert-card.is-expanded .cert-expand-toggle i { transform: rotate(180deg); }
+.cert-link { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 0.82rem; padding: 0.45rem 0.9rem; border-radius: 0.5rem; background: var(--nested-bg); border: 1px solid var(--nested-border); display: inline-flex; align-items: center; gap: 0.4rem; }
+.cert-link i { transition: transform 0.3s ease; }
+.cert-link:hover { background: var(--primary); color: white !important; border-color: transparent; }
+.cert-link:hover i { transform: translateX(3px); }
+
+/* Engineering Project Matrix Layout */
+.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 1050px; margin: 0 auto; perspective: 1000px; }
+.project-card { background: var(--card-bg); padding: 2rem; border-radius: 1rem; box-shadow: var(--card-shadow); border: 1px solid var(--card-border); display: flex; flex-direction: column; height: 100%; position: relative; overflow: hidden; transform-style: preserve-3d; will-change: transform; }
+.project-card:hover { transform: translateY(-6px); box-shadow: var(--card-hover-shadow); border-color: rgba(37, 99, 235, 0.2); }
 .project-blue { border-top: 3px solid var(--primary); }
 .project-purple { border-top: 3px solid var(--purple); }
 .project-emerald { border-top: 3px solid var(--emerald); }
 .project-cyan { border-top: 3px solid var(--cyan); }
 .project-card.large { grid-column: span 2; }
-.badge { font-size: 0.7rem; font-weight: 700; padding: 0.35rem 0.8rem; border-radius: 2rem; color: white; letter-spacing: 0.02em; text-transform: uppercase; }
+.badge { font-size: 0.7rem; font-weight: 700; padding: 0.35rem 0.8rem; border-radius: 2rem; color: white; letter-spacing: 0.02em; text-transform: uppercase; z-index: 2; }
 .badge-blue { background: var(--primary); }
 .badge-purple { background: var(--purple); }
 .badge-emerald { background: var(--emerald); }
 .badge-cyan { background: var(--cyan); }
-.project-desc { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem; }
+.project-desc { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem; z-index: 2; }
 
-.project-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; width: 100%; cursor: pointer; }
+.project-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; width: 100%; cursor: pointer; z-index: 2; }
 .project-title-wrapper { flex: 1; }
 .header-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 0.75rem; }
 .accordion-toggle { background: var(--nested-bg); border: none; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-dark); cursor: pointer; }
 .project-card:hover .accordion-toggle { background: var(--primary); color: white; }
 
 .project-card.is-expanded .accordion-toggle { transform: rotate(180deg); background: var(--text-dark); color: var(--card-bg); }
-.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1); will-change: max-height; }
+.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1); will-change: max-height; z-index: 2; position: relative; }
 .project-card.is-expanded .accordion-content { max-height: 1200px; }
 .accordion-inner { padding-top: 1.25rem; border-top: 1px dashed var(--card-border); margin-top: 0.5rem; }
 
@@ -209,7 +243,7 @@ body, .navbar, .experience-card, .project-card, .cert-card, .btn, i, p, h1, h2, 
 .contact-item { text-align: center; padding: 2.2rem 1.5rem; background: rgba(15, 23, 42, 0.6); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
 .contact-item:hover { transform: translateY(-5px); background: rgba(15, 23, 42, 0.85); border-color: rgba(37, 99, 235, 0.5); }
 .contact-icon { font-size: 2rem; color: #38bdf8; margin-bottom: 1.2rem; }
-.contact-label { color: #cbd5e1; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; tracking: 0.06em; margin-bottom: 0.5rem; }
+.contact-label { color: #cbd5e1; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
 .contact-value { font-size: 1rem; font-weight: 600; color: #ffffff; display: block; }
 .contact-value-link { font-size: 1rem; font-weight: 600; color: #60a5fa; text-decoration: none; display: block; }
 
