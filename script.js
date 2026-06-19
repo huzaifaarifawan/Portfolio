@@ -126,15 +126,15 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const labelText = toggleBtn.childNodes[0];
         if (card.classList.contains('is-expanded')) {
-          labelText.textContent = "Collapse ";
+          labelText.textContent = "Collapse Details ";
         } else {
-          labelText.textContent = "Read More ";
+          labelText.textContent = "Expand Details ";
         }
       });
     }
   });
 
-  // --- Theme Architecture Switcher Pipeline ---
+  // --- Theme Switcher Pipeline ---
   const themeToggleBtn = document.getElementById('themeToggleBtn');
   const currentTheme = localStorage.getItem('theme') || 'dark';
 
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Real-time Card Light Gradient Coordinate Mapping & Parallax 3D Tilt Engine ---
+  // --- Card Light Gradient Coordinate Mapping & Parallax 3D Tilt Engine ---
   const handleCardInteraction = (e) => {
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
@@ -170,7 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
     card.style.setProperty('--mouse-x', `${x}px`);
     card.style.setProperty('--mouse-y', `${y}px`);
 
-    // Parallax Tilt Calculation Matrix
     if (window.innerWidth > 768) {
       const tiltX = (y - rect.height / 2) / (rect.height / 2) * -4; 
       const tiltY = (x - rect.width / 2) / (rect.width / 2) * 4; 
@@ -183,7 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
     card.style.transform = `rotateX(0deg) rotateY(0deg) translateY(0px) scale(1)`;
   };
 
-  // Bind interaction engines to all layout structural elements
   document.querySelectorAll('.experience-card, .project-card, .cert-card').forEach(card => {
     card.addEventListener('mousemove', handleCardInteraction);
     card.addEventListener('mouseleave', resetCardInteraction);
