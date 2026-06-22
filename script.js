@@ -55,7 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
     revealObserver.observe(el);
   });
 
-  // --- Dynamic Scroll Monitor Logic ---
+  // --- Optimized Scroll Monitor Pipeline (Uses requestAnimationFrame) ---
+  let scrollUpdateScheduled = false;
+
   const handleScrollOperations = () => {
     const scrollPosition = window.scrollY;
     nav.classList.toggle('scrolled', scrollPosition > 50);
@@ -77,10 +79,18 @@ document.addEventListener('DOMContentLoaded', () => {
         link.classList.add('active');
       }
     });
+
+    scrollUpdateScheduled = false;
   };
 
-  window.addEventListener('scroll', handleScrollOperations, { passive: true });
-  handleScrollOperations();
+  window.addEventListener('scroll', () => {
+    if (!scrollUpdateScheduled) {
+      window.requestAnimationFrame(handleScrollOperations);
+      scrollUpdateScheduled = true;
+    }
+  }, { passive: true });
+  
+  handleScrollOperations(); // Initial run configuration
 
   // --- Interactive Project Accordion Engine ---
   document.querySelectorAll('.project-card').forEach(card => {
@@ -126,15 +136,15 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const labelText = toggleBtn.childNodes[0];
         if (card.classList.contains('is-expanded')) {
-          labelText.textContent = "Collapse Details ";
+          labelText.textContent = "Collapse ";
         } else {
-          labelText.textContent = "Expand Details ";
+          labelText.textContent = "Read More ";
         }
       });
     }
   });
 
-  // --- Theme Switcher Pipeline ---
+  // --- Theme Architecture Switcher Pipeline ---
   const themeToggleBtn = document.getElementById('themeToggleBtn');
   const currentTheme = localStorage.getItem('theme') || 'dark';
 
@@ -160,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Card Light Gradient Coordinate Mapping & Parallax 3D Tilt Engine ---
+  // --- Real-time Card Light Gradient Coordinate Mapping & Parallax 3D Tilt Engine ---
   const handleCardInteraction = (e) => {
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
@@ -170,9 +180,10 @@ document.addEventListener('DOMContentLoaded', () => {
     card.style.setProperty('--mouse-x', `${x}px`);
     card.style.setProperty('--mouse-y', `${y}px`);
 
+    // Parallax Tilt Calculation Matrix
     if (window.innerWidth > 768) {
-      const tiltX = (y - rect.height / 2) / (rect.height / 2) * -4; 
-      const tiltY = (x - rect.width / 2) / (rect.width / 2) * 4; 
+      const tiltX = (y - rect.height / 2) / (rect.height / 2) * -6; 
+      const tiltY = (x - rect.width / 2) / (rect.width / 2) * 6; 
       card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-6px) scale(1.01)`;
     }
   };
@@ -182,6 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card.style.transform = `rotateX(0deg) rotateY(0deg) translateY(0px) scale(1)`;
   };
 
+  // Bind interaction engines to all layout structural elements
   document.querySelectorAll('.experience-card, .project-card, .cert-card').forEach(card => {
     card.addEventListener('mousemove', handleCardInteraction);
     card.addEventListener('mouseleave', resetCardInteraction);
