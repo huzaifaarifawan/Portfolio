@@ -229,3 +229,40 @@ body {
   .info-grid { grid-template-columns: 1fr; }
   .navbar { width: 90%; }
 }
+
+/* ... (Keep existing setup) ... */
+
+/* New: Live Pulse Indicator */
+.profile-wrapper { position: relative; display: inline-block; }
+.profile-pulse {
+  position: absolute; bottom: 10px; right: 10px; width: 16px; height: 16px;
+  background: var(--emerald); border-radius: 50%; border: 3px solid var(--bg-main);
+  box-shadow: 0 0 0 rgba(16, 185, 129, 0.4); animation: pulse 2s infinite;
+}
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); } 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); } }
+
+/* New: Enhanced Card Hover Shadow */
+.experience-card:hover, .cert-card:hover, .project-card:hover {
+  box-shadow: 0 10px 30px -10px rgba(0, 102, 204, 0.2);
+}
+
+/* New: Professional Verify Link Style */
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.85rem;
+  border: 1px solid var(--card-border);
+  transition: var(--transition-smooth);
+}
+.cert-link:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
