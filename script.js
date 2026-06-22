@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 1. Initialize Lenis Smooth Scroll Engine
   const lenis = new Lenis({
     duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Silky Framer curve
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
     direction: 'vertical',
     smooth: true,
   });
@@ -33,65 +33,57 @@ document.addEventListener("DOMContentLoaded", () => {
       gsap.to(revealElements, {
         scrollTrigger: {
           trigger: section,
-          start: "top 85%", // Triggers slightly before element enters
+          start: "top 85%", 
           toggleActions: "play none none reverse"
         },
         y: 0,
         opacity: 1,
         duration: 1,
-        stagger: 0.15, // Cascade effect
+        stagger: 0.15,
         ease: "power3.out"
       });
     }
   });
 
-  // 4. Smooth Scrolling for Navbar Links (Lenis Intercept)
+  // 4. Smooth Scrolling for Navbar Links
   const navLinks = document.querySelectorAll('.nav-link');
   
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-      e.preventDefault(); 
-      
-      // Get the target ID (e.g. #experience)
+      // Check if it's an internal hash link
       const targetId = link.getAttribute('href');
-      
-      // Navigate to target using Lenis. The offset pushes the view down so the floating navbar doesn't cover the title.
-      lenis.scrollTo(targetId, {
-        offset: -100, 
-        duration: 1.5,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-      });
+      if (targetId && targetId.startsWith('#')) {
+        e.preventDefault(); 
+        lenis.scrollTo(targetId, {
+          offset: -100, 
+          duration: 1.5,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+        });
+      }
     });
   });
 
-  // 5. Accordion Logic (For Experiences, Certifications, and Projects)
+  // 5. Accordion Logic
   const cards = document.querySelectorAll('.experience-card, .project-card, .cert-card');
 
   cards.forEach(card => {
-    // Find the toggle button inside this specific card
     const toggle = card.querySelector('.exp-accordion-toggle, .accordion-toggle, .cert-expand-toggle');
-    
-    // Also allow clicking the whole header to open it
     const header = card.querySelector('.experience-header, .project-header, .cert-header');
     const triggerElement = toggle || header;
 
     if (triggerElement) {
       triggerElement.addEventListener('click', (e) => {
+        // Prevent triggering if user clicks the 'Verify' button inside the card
+        if (e.target.closest('.cert-link')) return;
+
         e.stopPropagation();
-        
         const isCurrentlyExpanded = card.classList.contains('is-expanded');
 
-        // Close all other cards first (Optional: remove this if you want multiple open at once)
         cards.forEach(c => c.classList.remove('is-expanded'));
 
-        // Toggle the clicked one
         if (!isCurrentlyExpanded) {
           card.classList.add('is-expanded');
-          
-          // Small UX feature: Recalculate ScrollTrigger sizes since the layout height just changed
-          setTimeout(() => {
-            ScrollTrigger.refresh();
-          }, 600); // 600ms matches the CSS transition time
+          refreshScrollTrigger();
         }
       });
     }
@@ -113,4 +105,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Helper function for layout shifts
+  function refreshScrollTrigger() {
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 600);
+  }
 });
