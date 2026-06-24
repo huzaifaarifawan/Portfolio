@@ -10,12 +10,20 @@
 </head>
 <body>
 
+<!-- Preloader -->
+<div id="preloader" aria-hidden="true">
+  <div class="preloader-inner">
+    <span class="preloader-logo"><i class="fas fa-shield-alt"></i> MH.</span>
+    <div class="preloader-bar"><span id="preloaderProgress"></span></div>
+  </div>
+</div>
+
 <div id="lenis-wrapper">
 
   <nav class="navbar">
     <div class="nav-container">
       <span class="nav-logo"><i class="fas fa-shield-alt"></i> MH.</span>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="#home" class="nav-link active">Home</a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#certifications" class="nav-link">Certifications</a>
@@ -23,14 +31,17 @@
         <a href="#resume-view" class="nav-link">Resume</a>
         <a href="#contact" class="nav-link">Contact</a>
       </div>
-      <div style="display: flex; align-items: center; gap: 1rem;">
-        <button id="themeToggleBtn" class="theme-btn" aria-label="Toggle Theme System">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <button id="themeToggleBtn" class="theme-btn" aria-label="Toggle light/dark theme">
           <i class="fas fa-moon"></i>
         </button>
-        <button id="mobileMenuBtn" class="mobile-btn" aria-label="Toggle Navigation Menu"><i class="fas fa-bars"></i></button>
+        <button id="mobileMenuBtn" class="mobile-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
     </div>
   </nav>
+  <div id="mobileBackdrop" class="mobile-backdrop"></div>
 
   <section id="home" class="section hero">
     <div class="container hero-container">
@@ -42,8 +53,8 @@
       <p class="heading-lg text-blue reveal">IAM Consultant | Resident Engineer | Full Stack Developer</p>
       <p class="description reveal">Deploying Enterprise Identity & Access Governance infrastructure using the IBM Security stack.</p>
       <div class="button-group reveal">
-        <a href="#contact" class="btn btn-primary nav-link">Contact Me</a>
-        <a href="resume.pdf" download class="btn btn-secondary"><i class="fas fa-cloud-download-alt"></i> Download CV</a>
+        <a href="#contact" class="btn btn-primary nav-link magnetic">Contact Me</a>
+        <a href="resume.pdf" download class="btn btn-secondary magnetic"><i class="fas fa-cloud-download-alt"></i> Download CV</a>
       </div>
     </div>
   </section>
@@ -356,7 +367,7 @@
                 <li>MongoDB Document Storage Clustered Models</li>
                 <li>Ionic React Cross-Platform Mobile Deployment</li>
               </ul>
-              <a href="https://huzaifaarifawan.github.io/cypulse-frontend/" target="_blank" class="project-link btn btn-purple" style="margin-top: 1rem;">Explore Platform <i class="fas fa-external-link-alt"></i></a>
+              <a href="https://huzaifaarifawan.github.io/cypulse-frontend/" target="_blank" class="project-link btn btn-purple magnetic" style="margin-top: 1rem;">Explore Platform <i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
         </div>
@@ -491,6 +502,8 @@
       <p class="copyright">&copy; 2026 Muhammad Huzaifa Bin Arif. Secure Access Architecture Operations.</p>
     </div>
   </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
 </div>
 
